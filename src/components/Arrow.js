@@ -4,25 +4,27 @@ const Arrow = ({ color }) => {
   return (
     <div className="cursor-pointer">
       <svg
-        width="30"
-        height="60"
-        viewBox="0 0 46 85"
+        width="51"
+        height="51"
+        viewBox="0 0 51 51"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M1.96289 2.52152L43.4968 44.0554"
-          stroke={color}
-          strokeWidth="4.4098"
-          strokeMiterlimit="10"
-          strokeLinejoin="round"
+        <rect
+          x="51"
+          y="50.6076"
+          width="50.2154"
+          height="50.2154"
+          rx="6"
+          transform="rotate(-180 51 50.6076)"
+          fill="#1E5EC4"
         />
         <path
-          d="M1.96289 83.2502L43.4968 41.7163"
-          stroke={color}
-          strokeWidth="4.4098"
-          strokeMiterlimit="10"
-          strokeLinejoin="round"
+          d="M22.9381 37.2368L34.7144 25.4606L22.9381 13.6844"
+          stroke="white"
+          strokeWidth="5"
+          strokeLinecap="square"
+          strokeLinejoin="bevel"
         />
       </svg>
     </div>

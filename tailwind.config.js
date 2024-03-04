@@ -8,21 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainPurple: "#524DF6",
-        mainGreen: "#17CAC6",
-        lightBlack: "#001325",
+        background: "#F3F2F0",
+        mainBlue: "#133F83",
+        darkBlue: "#04193A",
       },
-      animation: {
-        ["infinite-slider"]: "infiniteSlider 30s linear infinite",
-      },
-      keyframes: {
-        infiniteSlider: {
-          "0%": { transform: "translateX(0)" },
-          "100%": {
-            transform: "translateX(calc(-250px * 5))",
-          },
-        },
-      },
+
       fontSize: {
         "2xs": "0.625rem",
         "3xs": "0.5rem",
@@ -31,17 +21,9 @@ module.exports = {
         headline: "140px",
       },
       fontFamily: {
-        interBlack: ["Inter-Black", "sans-serif"],
-        interBold: ["Inter-Bold", "sans-serif"],
-        interExtraBold: ["Inter-ExtraBold", "sans-serif"],
-        interLight: ["Inter-Light", "sans-serif"],
-        inter: ["Inter-Regular", "sans-serif"],
-        aonik: ["aonik-black", "sans-serif"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        poppinsExtraBold: ["poppins-extra-bold", "sans-serif"],
+        poppinsBold: ["poppins-bold", "sans-serif"],
+        regular: ["poppins-regular", "sans-serif"],
       },
       screens: {
         xs: { max: "380px" },

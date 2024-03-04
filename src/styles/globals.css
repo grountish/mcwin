@@ -3,77 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'aonik-black';
-    src: url('/fonts/Aeonik-Bold.otf');
+    font-family: 'poppins-extra-bold';
+    src: url('/fonts/Poppins-ExtraBold.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Aeonik-Regular';
-    src: url('/fonts/Aeonik-Regular.otf');
+    font-family: 'poppins-regular';
+    src: url('/fonts/Poppins-Regular.ttf');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Black';
-    src: url('/fonts/Inter-Black.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Bold';
-    src: url('/fonts/Inter-Bold.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-ExtraBold';
-    src: url('/fonts/Inter-ExtraBold.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-ExtraLight';
-    src: url('/fonts/Inter-ExtraLight.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Light';
-    src: url('/fonts/Inter-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Medium';
-    src: url('/fonts/Inter-Medium.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Regular';
-    src: url('/fonts/Inter-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter-Thin';
-    src: url('/fonts/Inter-Thin.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-p strong {
-    font-family: 'Inter-Bold';
 }
 
 ul li {
@@ -85,38 +25,18 @@ ul {
     padding: revert !important;
 }
 
-/* iPad Air */
-@media only screen and (width: 820px) and (height: 1180px) {
-    .sectionOneBgImage {
-        background-image: url('/algo-ipad-pro-bg.svg') !important;
-        background-position: center !important;
-        background-size: cover !important;
-    }
+.swiper-slide {
+    width: 40% !important;
 }
 
-/* iPad Mini */
-@media only screen and (width: 768px) and (height: 1024px) {
-    .sectionOneBgImage {
-        background-image: url('/algo-ipad-pro-bg.svg') !important;
-        background-position: center !important;
-        background-size: cover !important;
-    }
+.swiper-pagination-bullet {
+    background: #1E5EC4 !important;
+    width: 16px !important;
+    height: 16px !important;
+    opacity: 1 !important;
+    transition: all 0.3s !important;
 }
 
-/* iPad Pro */
-@media only screen and (width: 1024px) and (height: 1366px) {
-    .ipadHeight {
-        min-height: 900px !important;
-        padding: 30px !important;
-    }
-
-    .sectionOneBgImage {
-        background-image: url('/algo-ipad-pro-bg.svg') !important;
-        background-position: center !important;
-        background-size: cover !important;
-    }
-
-    .sectionOneSideData {
-        margin-top: 25vh !important;
-    }
+.swiper-pagination-bullet-active {
+    background: #04193A !important;
 }

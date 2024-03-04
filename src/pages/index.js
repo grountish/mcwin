@@ -20,7 +20,7 @@ export default function Home({ page, layout }) {
     <div className="w-screen">
       <Header layout={layout} />
       <BlockContent blocks={page.Blocks} serializers={serializers} />
-      {/* <Footer layout={layout} /> */}
+      <Footer layout={layout} />
     </div>
   );
 }

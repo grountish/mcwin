@@ -14,7 +14,7 @@ const serializers = {
   },
   types: {
     mainHero: (props) => <SectionOne {...props.node} />,
-    agenda: (props) => <SectionTwo {...props.node} />,
+    bestMoments: (props) => <SectionTwo {...props.node} />,
     location: (props) => <SectionThree {...props.node} />,
     partners: (props) => <SectionFour {...props.node} />,
     faqs: (props) => <SectionFive {...props.node} />,

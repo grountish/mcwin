@@ -3,13 +3,11 @@ import React from "react";
 
 const Button = ({ title, link, color, bgColor, classes }) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      className={`px-4 py-2 w-max font-aonik transition duration-300 rounded-lg cursor-pointer hover:drop-shadow-md z-50 ${color} ${bgColor} ${classes}`}
+    <div
+      className={`px-16 py-6 w-max transition duration-300 rounded-full font-bold text-xl cursor-pointer hover:drop-shadow-md z-50 bg-transparent border-white border ${classes}`}
     >
       {title}
-    </a>
+    </div>
   );
 };
 

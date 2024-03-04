@@ -22,9 +22,9 @@ const Header = ({ layout }) => {
   }, [router.asPath]);
   return (
     <div className="z-50 w-full bg-transparent absolute top-0 left-0 text-white">
-      <div className="flex items-center justify-between px-20 py-14">
+      <div className="flex items-center justify-between lg:px-20 px-6 lg:py-14 py-10">
         <div className="flex lg:hidden ml-4 items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer">
-          <div className="mr-auto">X</div>
+          <img className="h-10" src={urlFor(mainLogo)} alt="primary logo" />
         </div>
         <div className="lg:hidden">
           <button
@@ -80,7 +80,7 @@ const Header = ({ layout }) => {
                */}
       <div
         className={`fixed top-0 bottom-0 left-0 px-9 py-3 transition-all duration-[450ms] overflow-y-auto transform bg-darkBlue w-full rounded shadow-md navbar-menu z-100 block lg:hidden overflow-x-hidden ${
-          !menuOpen ? "translate-x-[100vw]" : ""
+          !menuOpen ? "translate-x-[150vw]" : ""
         }`}
         id="nav-wrapper"
       >

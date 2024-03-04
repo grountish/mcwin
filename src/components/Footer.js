@@ -1,34 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
+import urlFor from "@/utils/imageUrlBuilder";
 import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className="w-full flex justify-between md:px-12 p-6 md:py-10 bg-mainGreen">
-      <a className="cursor-pointer" href="https://algorand.foundation" target="_blank">
-        <img src="/logo.svg" alt="logo" />
+    <div className="w-full bg-background flex justify-between md:px-12 p-6 md:py-10 font-regular text-darkBlue">
+      <a
+        className="cursor-pointer"
+        href="https://algorand.foundation"
+        target="_blank"
+      >
+        <img src={urlFor(layout.footerLogo)} alt="logo" />
       </a>
       <div className="flex space-x-5">
-        <div className="flex space-x-5 items-center">
-          <a
-            href={layout.socialLogos[0].logoURL}
-            className="cursor-pointer"
-            target="_blank"
-          >
-            <img src="/twicher.svg" alt="logo" className="w-7" />
-          </a>
-          <a
-            href={layout.socialLogos[1].logoURL}
-            className="cursor-pointer"
-            target="_blank"
-          >
-            <img src="/youtube.svg" alt="logo" className="w-7" />
-          </a>
-          <a
-            href={layout.socialLogos[2].logoURL}
-            className="cursor-pointer"
-            target="_blank"
-          >
-            <img src="/twitter.svg" alt="logo" className="w-7" />
+        <div className="flex text-center">
+          © 2024 McWin Capital Partners. <br /> All Rights Reserved.
+        </div>
+      </div>
+      <div className="flex space-x-5">
+        <div className="text-right">
+          <p>For special support,</p>
+          <span className="pr-1">please contact</span>
+          <a href="mailto:ir@mcwin.fund" className="font-bold">
+            ir@mcwin.fund
           </a>
         </div>
       </div>
