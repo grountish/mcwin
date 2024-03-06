@@ -19,8 +19,8 @@ const MainHero = ({
 }) => {
   return (
     <div className='relative font-regular'>
-      <div className="lg:pt-40 lg:px-20 pt-12 px-7 lg:min-h-[280vh] min-h-[230vh] xl:min-h-[160vh] bg-slate-300 bg-[url('/main-section-bg.jpg')] bg-cover bg-no-repeat text-white">
-        <div className='flex flex-col lg:flex-row pt-20 pb-32'>
+      <div className="lg:pt-40 lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg.jpg')] bg-cover bg-no-repeat text-white">
+        <div className='flex flex-col lg:flex-row pt-20'>
           <div className='lg:w-1/2 w-full lg:pr-10'>
             <div className='text-lg'>{topHeader}</div>
             <div className='border border-y border-white space-y-6 py-6 border-x-0'>
@@ -73,7 +73,12 @@ const MainHero = ({
           <div className='w-full flex-wrap flex gap-6 justify-center items-center'>
             {founders.map((f, index) => {
               return (
-                <img key={index} src={urlFor(f)} alt='Pictu' className='w-36' />
+                <img
+                  key={index}
+                  src={urlFor(f)}
+                  alt='Pictu'
+                  className='md:w-36 w-20'
+                />
               );
             })}
           </div>
