@@ -3,7 +3,6 @@ import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
 
 const ImageInfoCollection = ({ collection }) => {
-  console.log(collection);
   return (
     <div className='bg-matteWhite grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-12 xl:px-72 lg:px-40 py-12'>
       {collection.map((section, index) => {
