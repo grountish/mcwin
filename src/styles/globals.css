@@ -3,40 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'poppins-extra-bold';
-    src: url('/fonts/Poppins-ExtraBold.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "poppins-extra-bold";
+  src: url("/fonts/Poppins-ExtraBold.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'poppins-regular';
-    src: url('/fonts/Poppins-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "poppins-regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 ul li {
-    list-style: revert;
+  list-style: revert;
 }
 
 ul {
-    list-style: unset !important;
-    padding: revert !important;
-}
-
-.swiper-slide {
-    width: 40% !important;
+  list-style: unset !important;
+  padding: revert !important;
 }
 
 .swiper-pagination-bullet {
-    background: #1E5EC4 !important;
-    width: 16px !important;
-    height: 16px !important;
-    opacity: 1 !important;
-    transition: all 0.3s !important;
+  background: #1e5ec4 !important;
+  width: 16px !important;
+  height: 16px !important;
+  opacity: 1 !important;
+  transition: all 0.3s !important;
 }
 
 .swiper-pagination-bullet-active {
-    background: #04193A !important;
+  background: #04193a !important;
 }

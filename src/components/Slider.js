@@ -11,20 +11,21 @@ import "swiper/css/scrollbar";
 import urlFor from "@/utils/imageUrlBuilder";
 import Arrow from "./Arrow";
 
-const SectionTwo = ({ title, moments }) => {
+const Slider = ({ title, images }) => {
   return (
-    <div className="bg-background py-20 font-regular">
-      <div>
-        <BlockContent
-          blocks={title}
-          className="text-center text-3xl text-mainBlue"
-        />
+    <div className='bg-background py-20 font-regular'>
+      <div className='text-center lg:text-3xl text-xs text-mainBlue'>
+        <BlockContent blocks={title} />
       </div>
-      <div className="pt-20">
-        <div className="relative">
+      <div className='pt-20'>
+        <div className='relative'>
           <Swiper
             spaceBetween={4}
-            slidesPerView={2.5}
+            breakpoints={{
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             centeredSlides
             loop
             slidesPerGroup={1}
@@ -41,25 +42,25 @@ const SectionTwo = ({ title, moments }) => {
               prevEl: `.prev`,
             }}
           >
-            {moments.map((moment, index) => (
-              <SwiperSlide key={index} className="!my-auto">
-                <div className="flex flex-col justify-center items-center">
-                  <img src={urlFor(moment)} alt="" />
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className='!my-auto'>
+                <div className='flex flex-col justify-center items-center'>
+                  <img src={urlFor(image)} alt='' />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="w-full flex items-center justify-center pt-10">
-            <div className="w-40">
-              <span className="swiper-pagination-dom">*</span>
+          <div className='w-full flex items-center justify-center pt-10'>
+            <div className='w-40'>
+              <span className='swiper-pagination-dom'>*</span>
             </div>
           </div>
 
-          <div className="absolute z-40 top-1/2 px-10 transform w-screen flex justify-between">
-            <div className="prev rotate-180">
+          <div className='absolute z-40 top-[35%] lg:px-10 -px-2 transform w-screen flex justify-between'>
+            <div className='prev rotate-180'>
               <Arrow />
             </div>
-            <div className="next">
+            <div className='next'>
               <Arrow />
             </div>
           </div>
@@ -69,4 +70,4 @@ const SectionTwo = ({ title, moments }) => {
   );
 };
 
-export default SectionTwo;
+export default Slider;
