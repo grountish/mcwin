@@ -5,9 +5,9 @@ import React from "react";
 const Footer = ({ layout }) => {
   return (
     <div className='bg-background p-6 lg:p-12'>
-      <div className='w-full flex justify-between font-regular text-darkBlue border-t lg:pt-12 pt-6 border-darkBlue'>
+      <div className='w-full flex justify-between items-center font-regular text-darkBlue border-t lg:pt-12 pt-6 border-darkBlue'>
         <a
-          className='cursor-pointer'
+          className='cursor-pointer md:min-w-[300px]'
           href='https://mcwin.fund/'
           target='_blank'
         >
@@ -26,7 +26,7 @@ const Footer = ({ layout }) => {
           <div className='lg:hidden block'>
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
-          <div>
+          <div className='md:min-w-[300px]'>
             <p>For special support,</p>
             <span className='pr-1'>please contact</span>
             <a href='mailto:ir@mcwin.fund' className='font-bold'>
