@@ -22,6 +22,9 @@ const Slider = ({ title, images }) => {
           <Swiper
             spaceBetween={4}
             breakpoints={{
+              320: {
+                slidesPerView: 1.3,
+              },
               1024: {
                 slidesPerView: 3,
               },
@@ -44,7 +47,7 @@ const Slider = ({ title, images }) => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className="!my-auto">
-                <div className="flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center min-w-[300px]">
                   <img src={urlFor(image)} alt="" />
                 </div>
               </SwiperSlide>
