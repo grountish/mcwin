@@ -4,32 +4,32 @@ import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className='bg-background p-6 lg:p-12'>
-      <div className='w-full flex justify-between font-regular text-darkBlue border-t lg:pt-12 pt-6 border-darkBlue'>
+    <div className="bg-background p-6 lg:p-12 fadeIn">
+      <div className="w-full flex justify-between font-regular text-darkBlue border-t lg:pt-12 pt-6 border-darkBlue">
         <a
-          className='cursor-pointer'
-          href='https://mcwin.fund/'
-          target='_blank'
+          className="cursor-pointer"
+          href="https://mcwin.fund/"
+          target="_blank"
         >
           <img
             src={urlFor(layout.footerLogo)}
-            alt='logo'
-            className='w-[74px] lg:w-[180px]'
+            alt="logo"
+            className="w-[74px] lg:w-[180px]"
           />
         </a>
-        <div className='flex space-x-5 text-[8.5px] lg:text-[20px]'>
-          <div className='lg:flex text-center hidden'>
+        <div className="flex space-x-5 text-[8.5px] lg:text-[20px]">
+          <div className="lg:flex text-center hidden">
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
         </div>
-        <div className='flex space-x-5 flex-col text-right text-[8.5px] lg:text-[20px]'>
-          <div className='lg:hidden block'>
+        <div className="flex space-x-5 flex-col text-right text-[8.5px] lg:text-[20px]">
+          <div className="lg:hidden block">
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
           <div>
             <p>For special support,</p>
-            <span className='pr-1'>please contact</span>
-            <a href='mailto:ir@mcwin.fund' className='font-bold'>
+            <span className="pr-1">please contact</span>
+            <a href="mailto:ir@mcwin.fund" className="font-bold">
               ir@mcwin.fund
             </a>
           </div>

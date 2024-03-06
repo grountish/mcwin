@@ -25,6 +25,7 @@ module.exports = {
         poppinsExtraBold: ["poppins-extra-bold", "sans-serif"],
         poppinsBold: ["poppins-bold", "sans-serif"],
         regular: ["poppins-regular", "sans-serif"],
+        lightItalic: ["poppins-light-italic", "sans-serif"],
       },
       screens: {
         xs: { max: "380px" },
