@@ -27,7 +27,7 @@ const MainHero = ({
             <div className="border border-t border-b-0 border-white space-y-6 py-6 border-x-0">
               <BlockContent
                 blocks={title}
-                className="lg:text-6xl text-4xl font-poppinsExtraBold fadeUp"
+                className="lg:text-6xl text-4xl font-poppinsExtraBold fadeUp  drop-shadow-xl"
               />
               <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
             </div>
