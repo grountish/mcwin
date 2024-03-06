@@ -27,7 +27,7 @@ const MainHero = ({
             <div className="border border-t border-b-0 border-white space-y-6 py-6 border-x-0">
               <BlockContent
                 blocks={title}
-                className="lg:text-6xl text-4xl font-poppinsExtraBold fadeUp"
+                className="lg:text-6xl text-4xl font-poppinsExtraBold fadeUp  drop-shadow-xl"
               />
               <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
             </div>
@@ -53,8 +53,9 @@ const MainHero = ({
             </div>
           </div>
           <div className="lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-0">
-            <div className="relative">
+            <div className="relative rounded-lg">
               <video
+                poster="/video-placeholder.jpg"
                 controls
                 loop
                 muted

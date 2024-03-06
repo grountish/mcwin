@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className='bg-matteWhite p-6 lg:p-12 fadeIn'>
-      <div className='w-full flex justify-between font-regular text-darkBlue border-t lg:pt-12 pt-6 border-darkBlue'>
+    <div className="bg-matteWhite p-6 lg:p-20">
+      <div className="w-full flex justify-between fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue">
         <a
           className='cursor-pointer'
           href='https://mcwin.fund/'
