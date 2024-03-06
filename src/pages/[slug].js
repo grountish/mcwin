@@ -6,8 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const NewPage = ({ page, layoutData }) => {
+  if (!page) {
+    return <div>Page not found</div>;
+  }
   return (
-    <div className='w-screen'>
+    <div className="w-screen">
       <Header layout={layoutData} />
       <BlockContent blocks={page.Blocks} serializers={serializers} />
       <Footer layout={layoutData} />
