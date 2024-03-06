@@ -4,6 +4,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { getValidUrl } from "@/utils/validUrl";
 import urlFor from "@/utils/imageUrlBuilder";
 import SeparatorRight from "./SeparatorRight";
+import serializers from "@/utils/serializers";
 
 const MainHero = ({
   title,
@@ -37,12 +38,12 @@ const MainHero = ({
               <div className="flex">
                 <img src="/calendar.svg" alt="calendar" className="pr-3" />{" "}
                 <span></span>
-                {date}
+                <BlockContent blocks={date} />
               </div>
               <div className="flex">
                 <img src="/location.svg" alt="location" className="pr-3" />{" "}
                 <span></span>
-                {location}
+                <BlockContent blocks={location} serializers={serializers} />
               </div>
             </div>
             <div className="pt-10">
