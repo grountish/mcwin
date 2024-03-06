@@ -1,9 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
 import { getValidUrl } from "@/utils/validUrl";
 import urlFor from "@/utils/imageUrlBuilder";
 import SeparatorRight from "./SeparatorRight";
+import serializers from "@/utils/serializers";
 
 const MainHero = ({
   title,
@@ -17,6 +18,9 @@ const MainHero = ({
   foundersText,
   founders,
 }) => {
+  const register = () => {
+    window.EventzillaBuyTickets("2138606712");
+  };
   return (
     <div className='relative font-regular'>
       <div className="lg:pt-40 lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg.jpg')] bg-cover bg-no-repeat text-white">
@@ -34,20 +38,21 @@ const MainHero = ({
               <div className='flex'>
                 <img src='/calendar.svg' alt='calendar' className='pr-3' />{" "}
                 <span></span>
-                {date}
+                <BlockContent blocks={date} />
               </div>
               <div className='flex'>
                 <img src='/location.svg' alt='location' className='pr-3' />{" "}
                 <span></span>
-                {location}
+                <BlockContent blocks={location} serializers={serializers} />
               </div>
             </div>
             <div className='pt-10'>
-              <Button
-                link='#'
-                title={buttonText}
-                classes='hover:bg-white hover:text-black'
-              />
+              <div onClick={register}>
+                <Button
+                  title={buttonText}
+                  classes='hover:bg-white hover:text-black'
+                />
+              </div>
             </div>
           </div>
           <div className='lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-0'>
