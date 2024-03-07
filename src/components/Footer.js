@@ -4,10 +4,10 @@ import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className="bg-matteWhite p-6 lg:p-20">
-      <div className="w-full flex justify-between fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue">
+    <div className='bg-matteWhite p-6 lg:p-20'>
+      <div className='w-full flex justify-between align-center fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue'>
         <a
-          className='cursor-pointer'
+          className='cursor-pointer md:min-w-[300px]'
           href='https://mcwin.fund/'
           target='_blank'
         >
@@ -17,7 +17,7 @@ const Footer = ({ layout }) => {
             className='w-[74px] lg:w-[180px]'
           />
         </a>
-        <div className='flex space-x-5 text-[8.5px] lg:text-[20px]'>
+        <div className='flex space-x-5 text-[8.5px] lg:text-[20px] md:min-w-[300px]'>
           <div className='lg:flex text-center hidden'>
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
