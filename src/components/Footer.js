@@ -26,7 +26,7 @@ const Footer = ({ layout }) => {
           <div className="lg:hidden block">
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
-          <div className="md:min-w-[300px]">
+          <div className="md:min-w-[300px] pt-4 md:pt-0">
             <p>For special support,</p>
             <span className="pr-1">please contact</span>
             <a href="mailto:ir@mcwin.fund" className="font-bold">

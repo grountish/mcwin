@@ -13,8 +13,8 @@ import Arrow from "./Arrow";
 
 const Slider = ({ title, images }) => {
   return (
-    <div className="bg-background py-20 font-regular">
-      <div className="text-center lg:text-3xl text-xs text-mainBlue fadeUp">
+    <div className="bg-background pt-5 pb-20  md:py-20 font-regular">
+      <div className="text-center lg:text-3xl text-lg px-12  text-mainBlue fadeUp">
         <BlockContent blocks={title} />
       </div>
       <div className="pt-20">
