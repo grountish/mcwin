@@ -27,7 +27,10 @@ export default function App({ Component, pageProps }) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aimmcwin.com" />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="https://cdn.sanity.io/images/9nxeopkt/production/d056adf40291633deb5a5ae8190f74cc6d290ebf-1372x720.png?h=400&fit=max"
+        />
         <link
           rel="icon"
           href="https://cdn.sanity.io/images/9nxeopkt/production/adaf4e76e7f1eaf8dbee9dc45f318244677bf2d7-98x97.jpg"
