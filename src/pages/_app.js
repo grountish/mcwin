@@ -1,9 +1,14 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
+import { animationLib } from "@/utils/animationLib";
 import Head from "next/head";
 import { useEffect } from "react";
-
+import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  useEffect(() => {
+    animationLib();
+  }, [router.pathname]);
   useEffect(() => {
     const script = document.createElement("script");
     script.src =

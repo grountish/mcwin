@@ -41,7 +41,7 @@ const ImageInfoCollection = ({
         {collection.map((section, index) => {
           return (
             <div
-              className='flex flex-col justify-center items-center py-6'
+              className='flex flex-col justify-center items-center py-6 fadeUp'
               key={index}
             >
               <div

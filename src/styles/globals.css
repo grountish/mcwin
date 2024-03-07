@@ -13,9 +13,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "poppins-bold";
   src: url("/fonts/Poppins-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins-semi-bold";
+  src: url("/fonts/Poppins-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +38,13 @@
 @font-face {
   font-family: "poppins-light-italic";
   src: url("/fonts/Poppins-LightItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins-extra-light-italic";
+  src: url("/fonts/Poppins-ExtraLightItalic.ttf");
   font-weight: normal;
   font-style: normal;
 }

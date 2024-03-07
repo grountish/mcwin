@@ -1,11 +1,13 @@
 import MainHero from "@/components/MainHero";
 import Slider from "@/components/Slider";
 import ImageInfoCollection from "@/components/ImageInfoCollection";
+import Agenda from "@/components/Agenda";
+
 import ImageInfoCTACollection from "@/components/ImageInfoCTACollection";
 const serializers = {
   marks: {
     link: ({ children, mark }) => (
-      <a href={mark.href} target='_blank' rel='noopener noreferer'>
+      <a href={mark.href} target="_blank" rel="noopener noreferer">
         {children}
       </a>
     ),
@@ -14,6 +16,7 @@ const serializers = {
     mainHero: (props) => <MainHero {...props.node} />,
     slider: (props) => <Slider {...props.node} />,
     imageAndInfoCollection: (props) => <ImageInfoCollection {...props.node} />,
+    agenda: (props) => <Agenda {...props.node} />,
     imageInfoCTACollection: (props) => (
       <ImageInfoCTACollection {...props.node} />
     ),

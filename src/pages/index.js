@@ -3,19 +3,9 @@ import { getClient } from "@/lib/sanity.server";
 import BlockContent from "@sanity/block-content-to-react";
 import serializers from "@/utils/serializers";
 import Footer from "@/components/Footer";
-import { animationLib } from "../utils/animationLib";
-import { useEffect } from "react";
-import Head from "next/head";
-
-export const metadata = {
-  title: "...",
-  description: "...",
-};
 
 export default function Home({ page, layout }) {
-  useEffect(() => {
-    animationLib();
-  }, []);
+
 
   return (
     <div className='w-screen'>
