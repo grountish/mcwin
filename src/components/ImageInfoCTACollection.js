@@ -15,7 +15,7 @@ const ImageInfoCTACollection = ({
   return (
     <div className='relative'>
       <div
-        className={`lg:pt-40 lg:px-20 pt-12 px-7 bg-cover bg-no-repeat'`}
+        className={`lg:py-40 lg:px-16 pt-12 px-7 bg-cover bg-no-repeat'`}
         style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
       >
         <div className='py-20'>
@@ -34,30 +34,40 @@ const ImageInfoCTACollection = ({
               </div>
             )}
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-12 xl:px-72 lg:px-40 py-12'>
+          <div className='grid grid-cols-1 md:grid-cols-2 md:px-30 px-0 xl:grid-cols-3 lg:px-40 lg:py-12 py-24'>
             {collection.map((section, index) => {
               return (
                 <div
-                  className='flex flex-col justify-center items-center py-6'
+                  className='flex flex-col justify-between text-white border border-white rounded-2xl m-4 pb-3'
                   key={index}
                 >
-                  <div
-                    className='rounded-t-lg h-40 w-40 bg-cover bg-center bg-no-repeat'
-                    style={{ backgroundImage: `url(${urlFor(section.image)})` }}
-                  ></div>
-                  <div className='text-mainBlue font-poppinsExtraBold text-lg pt-4'>
-                    <BlockContent blocks={section.title} />
+                  <div className='flex flex-col justify-between'>
+                    <div
+                      className='rounded-t-2xl h-40 w-full bg-cover bg-center bg-no-repeat'
+                      style={{
+                        backgroundImage: `url(${urlFor(section.image)})`,
+                      }}
+                    ></div>
+                    <div className='px-3 flex flex-col'>
+                      <div className='text-xs pt-4'>
+                        <BlockContent blocks={section.topSecondaryTitle} />
+                      </div>
+                      <div className='font-poppinsExtraBold text-lg pt-4'>
+                        <BlockContent blocks={section.title} />
+                      </div>
+                      <div className='w-1/2 text-xs pb-2'>
+                        <BlockContent blocks={section.subtitle} />
+                      </div>
+                    </div>
                   </div>
 
-                  <div className='w-1/2 text-center text-xs pb-3'>
-                    <BlockContent blocks={section.subtitle} />
+                  <div className='pt-10 text-center mx-3'>
+                    <Button
+                      link={section.buttonUrl}
+                      title={section.buttonTitle}
+                      classes='text-white !px-6 !py-3 !text-base !w-full'
+                    />
                   </div>
-
-                  <img
-                    className='w-20'
-                    src={urlFor(section.logo)}
-                    alt='company logo'
-                  />
                 </div>
               );
             })}

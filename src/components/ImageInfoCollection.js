@@ -51,11 +51,9 @@ const ImageInfoCollection = ({
               <div className='text-mainBlue font-poppinsExtraBold text-lg pt-4'>
                 <BlockContent blocks={section.title} />
               </div>
-
               <div className='w-1/2 text-center text-xs pb-3'>
                 <BlockContent blocks={section.subtitle} />
               </div>
-
               <img
                 className='w-20'
                 src={urlFor(section.logo)}
