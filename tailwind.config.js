@@ -24,8 +24,10 @@ module.exports = {
       fontFamily: {
         poppinsExtraBold: ["poppins-extra-bold", "sans-serif"],
         poppinsBold: ["poppins-bold", "sans-serif"],
+        poppinsSemiBold: ["poppins-semi-bold", "sans-serif"],
         regular: ["poppins-regular", "sans-serif"],
         lightItalic: ["poppins-light-italic", "sans-serif"],
+        ExtralightItalic: ["poppins-extra-light-italic", "sans-serif"],
       },
       screens: {
         xs: { max: "380px" },
