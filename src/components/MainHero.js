@@ -35,12 +35,16 @@ const MainHero = ({
               <div className="flex">
                 <img src="/calendar.svg" alt="calendar" className="pr-3" />{" "}
                 <span></span>
-                <BlockContent blocks={date} />
+                <div className="underlined">
+                  <BlockContent blocks={date} className="" />
+                </div>
               </div>
               <div className="flex">
                 <img src="/location.svg" alt="location" className="pr-3" />{" "}
                 <span></span>
-                <BlockContent blocks={location} serializers={serializers} />
+                <div className="underlined">
+                  <BlockContent blocks={location} serializers={serializers} />
+                </div>
               </div>
             </div>
             <div className="pt-4">
