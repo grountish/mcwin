@@ -34,7 +34,7 @@ const ImageInfoCTACollection = ({
               </div>
             )}
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 md:px-30 px-0 xl:grid-cols-3 lg:px-40 lg:py-12 py-24'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-[55vw] mx-auto md:py-12 py-20'>
             {collection.map((section, index) => {
               return (
                 <div
