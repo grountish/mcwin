@@ -45,7 +45,7 @@ const Agenda = ({ slots }) => {
             <div onClick={register} className="m-auto">
               <Button
                 title="Register"
-                classes="hover:bg-deepBlue hover:text-white !border-deepBlue border-2 mt-8"
+                classes="!border-deepBlue border-2 mt-8 !text-deepBlue !hover:text-red-400"
               />
             </div>
           </div>
