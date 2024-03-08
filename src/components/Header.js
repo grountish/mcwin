@@ -26,7 +26,7 @@ const Header = ({ layout }) => {
     <div className="z-50 w-full bg-transparent absolute top-0 left-0 text-white">
       <div className="flex items-center justify-between lg:px-20 px-6 lg:py-14 py-10">
         <div className="flex lg:hidden ml-4 items-center  lg:self-center justify-between h-16 lg:mr-auto cursor-pointer">
-          <img className="h-10" src={urlFor(mainLogo)} alt="primary logo" />
+          <img className="h-12" src={urlFor(mainLogo)} alt="primary logo" />
         </div>
         <div className="lg:hidden">
           <button
@@ -51,7 +51,7 @@ const Header = ({ layout }) => {
           <span onClick={() => router.push("/")} className="mr-auto">
             {mainLogo && (
               <img
-                className="h-16 fadeIn"
+                className="h-16 md:h-20 fadeIn"
                 src={urlFor(mainLogo)}
                 alt="primary logo"
               />

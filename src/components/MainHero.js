@@ -21,7 +21,7 @@ const MainHero = ({
   return (
     <div className="relative font-regular">
       <div className="lg:pt-40 lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
-        <div className="flex flex-col lg:flex-row pt-[3vh] md:pb-40 pb-10">
+        <div className="flex flex-col lg:flex-row pt-24 md:pt-[3vh] md:pb-40 pb-10">
           <div className="lg:w-1/2 w-full lg:pr-10">
             <div className="text-xl md:text-2xl ">{topHeader}</div>
             <div className="border border-t border-b-0 border-white space-y-6 py-6 border-x-0">
