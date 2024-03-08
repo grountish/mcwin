@@ -24,11 +24,12 @@ const TitleSubtitleCTA = ({
             </div>
             <BlockContent blocks={subtitle} className='text-xs lg:text-lg' />
             <div className='pt-10'>
-              <Button
-                link={CTAURL}
-                title={CTATitle}
-                classes='hover:bg-white hover:text-black'
-              />
+              <a href={CTAURL}>
+                <Button
+                  title={CTATitle}
+                  classes='hover:bg-white hover:text-black'
+                />
+              </a>
             </div>
           </div>
         </div>
