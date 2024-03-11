@@ -4,15 +4,37 @@ import serializers from "../utils/serializers";
 import BlockContent from "@sanity/block-content-to-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { useEffect, useState } from "react";
+import router from "next/router";
 const NewPage = ({ page, layoutData }) => {
+  const [changeClass, setChangeClass] = useState("");
+
+  useEffect(() => {
+    const handleChangeStart = () => {
+      setChangeClass("fadeOut");
+    };
+
+    const handleChangeComplete = () => {
+      setChangeClass("fade-into");
+    };
+
+    router.events.on("routeChangeStart", handleChangeStart);
+    router.events.on("routeChangeComplete", handleChangeComplete);
+    return () => {
+      router.events.off("routeChangeStart", handleChangeStart);
+      router.events.off("routeChangeComplete", handleChangeComplete);
+    };
+  }, []);
+
   if (!page) {
     return <div>Page not found</div>;
   }
   return (
     <div className="w-screen">
       <Header layout={layoutData} />
-      <BlockContent blocks={page.Blocks} serializers={serializers} />
+      <div className={changeClass}>
+        <BlockContent blocks={page.Blocks} serializers={serializers} />
+      </div>
       <Footer layout={layoutData} />
     </div>
   );

@@ -115,3 +115,38 @@ ul {
   transform: translate3d(0, 0, 0);
 }
 
+.fadeOut {
+  animation: fadeOut 1.2s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(1px) brightness(1);
+  }
+
+  100% {
+    filter: blur(0);
+    transform: scale(1.015);
+    opacity: 0.7 brightness(0.4);
+  }
+}
+
+.fade-into {
+  animation: fadeInTo 1.2s;
+}
+
+@keyframes fadeInTo {
+  0% {
+    opacity: 0.7;
+    transform: scale(1.015);
+    filter: blur(1px) brightness(0.4);
+  }
+
+  100% {
+    filter: blur(0) brightness(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+}

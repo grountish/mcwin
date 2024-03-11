@@ -67,7 +67,6 @@ const ImageInfoCTACollection = ({
                   <div className="pt-10 text-center mx-3">
                     <Link href={section.buttonUrl} target={"_blank"}>
                       <Button
-                        link={section.buttonUrl}
                         title={section.buttonTitle}
                         classes="text-white !px-6 !py-3 !text-base !w-full"
                       />
