@@ -84,14 +84,22 @@ const MainHero = ({
             <h4 className="anim">{foundersText}</h4>
           </div>
           <div className="w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20">
-            {founders.map((f, index) => {
+            {founders.map(({ image, url }, index) => {
               return (
-                <img
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
                   key={index}
-                  src={urlFor(f)}
-                  alt="Pictu"
-                  className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn hover:scale-110 transition-transform duration-500 ease-in-out"
-                />
+                  className="fadeIn"
+                >
+                  <img
+                    key={index}
+                    src={urlFor(image)}
+                    alt="Pictu"
+                    className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn hover:scale-110 transition-transform duration-500 ease-in-out"
+                  />
+                </a>
               );
             })}
           </div>

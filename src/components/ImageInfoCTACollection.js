@@ -3,6 +3,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
 import SeparatorRight from "./SeparatorRight";
 import Button from "./Button";
+import Link from "next/link";
 
 const ImageInfoCTACollection = ({
   backgroundImage,
@@ -64,11 +65,13 @@ const ImageInfoCTACollection = ({
                   </div>
 
                   <div className="pt-10 text-center mx-3">
-                    <Button
-                      link={section.buttonUrl}
-                      title={section.buttonTitle}
-                      classes="text-white !px-6 !py-3 !text-base !w-full"
-                    />
+                    <Link href={section.buttonUrl} target={"_blank"}>
+                      <Button
+                        link={section.buttonUrl}
+                        title={section.buttonTitle}
+                        classes="text-white !px-6 !py-3 !text-base !w-full"
+                      />
+                    </Link>
                   </div>
                 </div>
               );

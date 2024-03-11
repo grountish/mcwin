@@ -5,10 +5,8 @@ import serializers from "@/utils/serializers";
 import Footer from "@/components/Footer";
 
 export default function Home({ page, layout }) {
-
-
   return (
-    <div className='w-screen'>
+    <div className="w-screen">
       <Header layout={layout} />
       <BlockContent blocks={page.Blocks} serializers={serializers} />
       <Footer layout={layout} />
