@@ -12,13 +12,10 @@ const TitleDataMapCTA = ({
   subtitle,
   dataOneIcon,
   dataOne,
-  dataOneURL,
   dataTwoIcon,
   dataTwo,
-  dataTwoURL,
   dataThreeIcon,
   dataThree,
-  dataThreeURL,
   buttonTitle,
 }) => {
   return (
