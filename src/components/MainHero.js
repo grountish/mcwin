@@ -6,10 +6,6 @@ import urlFor from "@/utils/imageUrlBuilder";
 import SeparatorRight from "./SeparatorRight";
 import serializers from "@/utils/serializers";
 import { register } from "@/utils/eventZilla";
-import { gsap } from "gsap";
-import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const MainHero = ({
   title,
@@ -23,21 +19,6 @@ const MainHero = ({
   foundersText,
   founders,
 }) => {
-  useEffect(() => {
-    document.querySelectorAll(".anim").forEach((el, i) => {
-      const randomNumber = Math.floor(Math.random() * 3);
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 110%",
-        },
-        autoAlpha: 0,
-        y: randomNumber * 10,
-        duration: 0.8,
-        delay: i * 0.1,
-      });
-    });
-  }, []);
   return (
     <div className="relative font-regular">
       <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
@@ -99,7 +80,7 @@ const MainHero = ({
           </div>
         </div>
         <div className="border border-t border-x-0 border-b-0 border-white flex flex-col lg:flex-row justify-between w-full lg:pt-20 pt-10">
-          <div className="lg:w-80 lg:mr-20 text-center lg:text-left pb-10 lg:pb-0 anim">
+          <div className="lg:w-80 lg:mr-20 text-center lg:text-left pb-10 lg:pb-0 fadeIn">
             <h4 className="anim">{foundersText}</h4>
           </div>
           <div className="w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20">
@@ -109,7 +90,7 @@ const MainHero = ({
                   key={index}
                   src={urlFor(f)}
                   alt="Pictu"
-                  className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] anim"
+                  className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn"
                 />
               );
             })}
