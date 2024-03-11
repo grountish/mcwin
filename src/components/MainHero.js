@@ -1,3 +1,4 @@
+"use client";
 import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
 import { getValidUrl } from "@/utils/validUrl";
@@ -20,29 +21,34 @@ const MainHero = ({
 }) => {
   return (
     <div className="relative font-regular">
-      <div className="lg:pt-40 lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
+      <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
         <div className="flex flex-col lg:flex-row pt-24 md:pt-[3vh] md:pb-40 pb-10">
           <div className="lg:w-1/2 w-full lg:pr-10">
-            <div className="text-xl md:text-2xl ">{topHeader}</div>
+            <div className="text-xl md:text-2xl fadeIn">{topHeader}</div>
             <div className="border border-t border-b-0 border-white space-y-6 py-6 border-x-0">
               <BlockContent
                 blocks={title}
-                className="lg:text-6xl text-4xl font-poppinsExtraBold fadeUp  drop-shadow-xl"
+                className="lg:text-6xl text-4xl font-poppinsExtraBold anim  drop-shadow-xl"
               />
-              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+              <div className="anim ">
+                <BlockContent
+                  blocks={subtitle}
+                  className="text-xs lg:text-lg"
+                />
+              </div>
             </div>
             <div className="py-[3vh] space-y-6 text-xl">
               <div className="flex">
                 <img src="/calendar.svg" alt="calendar" className="pr-3" />{" "}
                 <span></span>
-                <div className="underlined">
-                  <BlockContent blocks={date} className="" />
+                <div className="underlined anim">
+                  <BlockContent blocks={date} className="anim" />
                 </div>
               </div>
               <div className="flex">
                 <img src="/location.svg" alt="location" className="pr-3" />{" "}
                 <span></span>
-                <div className="underlined">
+                <div className="underlined anim">
                   <BlockContent blocks={location} serializers={serializers} />
                 </div>
               </div>
@@ -64,16 +70,18 @@ const MainHero = ({
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover rounded-lg drop-shadow-lg"
+                className="w-full h-full object-cover rounded-lg drop-shadow-lg anim"
                 src={getValidUrl(video)}
               />
             </div>
-            <div className="text-right pt-2 font-lightItalic">{videoText}</div>
+            <div className="text-right pt-2 font-lightItalic test anim">
+              {videoText}
+            </div>
           </div>
         </div>
         <div className="border border-t border-x-0 border-b-0 border-white flex flex-col lg:flex-row justify-between w-full lg:pt-20 pt-10">
-          <div className="lg:w-80 lg:mr-20 text-center lg:text-left pb-10 lg:pb-0">
-            <h4>{foundersText}</h4>
+          <div className="lg:w-80 lg:mr-20 text-center lg:text-left pb-10 lg:pb-0 fadeIn">
+            <h4 className="anim">{foundersText}</h4>
           </div>
           <div className="w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20">
             {founders.map((f, index) => {

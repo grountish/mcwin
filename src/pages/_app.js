@@ -1,14 +1,32 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
-import { animationLib } from "@/utils/animationLib";
 import Head from "next/head";
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { gsap } from "gsap";
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { animationLib } from "@/utils/animationLib";
+gsap.registerPlugin(ScrollTrigger);
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
     animationLib();
+    document.querySelectorAll(".anim").forEach((el, i) => {
+      const randomNumber = Math.floor(Math.random() * 3);
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 110%",
+        },
+        autoAlpha: 0,
+        y: randomNumber * 10,
+        duration: 0.8,
+        delay: i * 0.1,
+      });
+    });
   }, [router.pathname]);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src =

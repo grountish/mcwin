@@ -4,32 +4,32 @@ import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className='bg-matteWhite p-6 lg:p-20'>
-      <div className='w-full flex justify-between align-center fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue'>
+    <div className="bg-matteWhite p-6 lg:p-20">
+      <div className="w-full flex justify-between align-center fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue">
         <a
-          className='cursor-pointer md:min-w-[300px]'
-          href='https://mcwin.fund/'
-          target='_blank'
+          className="cursor-pointer md:min-w-[300px]"
+          href="https://mcwin.fund/"
+          target="_blank"
         >
           <img
             src={urlFor(layout.footerLogo)}
-            alt='logo'
-            className='w-[74px] lg:w-[180px]'
+            alt="logo"
+            className="w-[74px] lg:w-[120px]"
           />
         </a>
-        <div className='flex space-x-5 text-[8.5px] lg:text-[20px] md:min-w-[300px]'>
-          <div className='lg:flex text-center hidden'>
+        <div className="flex space-x-5 text-[8.5px] lg:text-[16px] md:min-w-[300px]">
+          <div className="lg:flex text-center hidden">
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
         </div>
-        <div className='flex space-x-5 flex-col text-right text-[8.5px] lg:text-[20px]'>
-          <div className='lg:hidden block'>
+        <div className="flex space-x-5 flex-col text-right text-[8.5px] lg:text-[16px]">
+          <div className="lg:hidden block">
             © 2024 McWin Capital Partners. <br /> All Rights Reserved.
           </div>
           <div className="md:min-w-[300px] pt-4 md:pt-0">
             <p>For special support,</p>
-            <span className='pr-1'>please contact</span>
-            <a href='mailto:ir@mcwin.fund' className='font-bold'>
+            <span className="pr-1">please contact</span>
+            <a href="mailto:ir@mcwin.fund" className="font-bold">
               ir@mcwin.fund
             </a>
           </div>

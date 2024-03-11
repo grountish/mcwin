@@ -22,6 +22,35 @@ const Header = ({ layout }) => {
     menuOpen && handleMenuOpen();
   }, [router.asPath]);
 
+  const burgerIcon = (
+    <svg
+      width="30"
+      height="25"
+      viewBox="0 0 30 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 2H30" stroke="white" strokeWidth="2.5" />
+      <path d="M0 13H30" stroke="white" strokeWidth="2.5" />
+      <path d="M0 23H30" stroke="white" strokeWidth="2.5" />
+    </svg>
+  );
+
+  const closeIcon = (
+    <svg
+      width="55"
+      height="55"
+      viewBox="0 0 55 55"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.6667 41.9559L13.0442 40.3334L25.8775 27.5L13.0442 14.6667L14.6667 13.0442L27.5 25.8775L40.3334 13.0442L41.9559 14.6667L29.1225 27.5L41.9559 40.3334L40.3334 41.9559L27.5 29.1225L14.6667 41.9559Z"
+        fill="white"
+      />
+    </svg>
+  );
+
   return (
     <div className="z-50 w-full bg-transparent absolute top-0 left-0 text-white">
       <div className="flex items-center justify-between lg:px-20 px-6 lg:py-14 py-10">
@@ -34,17 +63,7 @@ const Header = ({ layout }) => {
             className="flex items-center p-3 navbar-burger"
             data-menu
           >
-            <svg
-              width="30"
-              height="25"
-              viewBox="0 0 30 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 2H30" stroke="white" strokeWidth="2.5" />
-              <path d="M0 13H30" stroke="white" strokeWidth="2.5" />
-              <path d="M0 23H30" stroke="white" strokeWidth="2.5" />
-            </svg>
+            {burgerIcon}
           </button>
         </div>
         <div className="hidden lg:flex items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer">
@@ -60,14 +79,15 @@ const Header = ({ layout }) => {
         </div>
         <ul className="hidden lg:flex uppercase lg:items-center lg:w-auto lg:space-x-10 !list-none">
           {header.map(({ slug, title }, i) => (
-            <div
+            <Link
               key={i}
               className={path === slug ? "font-poppinsExtraBold" : ""}
+              href={slug}
             >
-              <Link href={slug}>{title}</Link>
-            </div>
+              {title}
+            </Link>
           ))}
-          <span className="cursor-pointer" onClick={register}>
+          <span className="cursor-pointer anim" onClick={register}>
             REGISTER NOW
           </span>
         </ul>
@@ -87,31 +107,21 @@ const Header = ({ layout }) => {
             className="navbar-close z-10 pt-6"
             data-menu
           >
-            <svg
-              width="55"
-              height="55"
-              viewBox="0 0 55 55"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.6667 41.9559L13.0442 40.3334L25.8775 27.5L13.0442 14.6667L14.6667 13.0442L27.5 25.8775L40.3334 13.0442L41.9559 14.6667L29.1225 27.5L41.9559 40.3334L40.3334 41.9559L27.5 29.1225L14.6667 41.9559Z"
-                fill="white"
-              />
-            </svg>
+            {closeIcon}
           </button>
         </div>
         <div>
-          <div className="text-right">
+          <div className="text-right flex flex-col">
             {header.map(({ slug, title }, i) => (
-              <div
+              <Link
                 key={i}
                 className={`${
                   path === slug ? "font-bold" : ""
                 } uppercase py-4 font-regular text-lg`}
+                href={slug}
               >
-                <Link href={slug}>{title}</Link>
-              </div>
+                {title}
+              </Link>
             ))}
             <div
               className="uppercase pt-4 font-regular text-lg"
