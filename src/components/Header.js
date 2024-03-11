@@ -81,13 +81,17 @@ const Header = ({ layout }) => {
           {header.map(({ slug, title }, i) => (
             <Link
               key={i}
-              className={path === slug ? "font-poppinsExtraBold" : ""}
+              className={
+                path === slug
+                  ? "font-poppinsExtraBold underlined"
+                  : "underlined"
+              }
               href={slug}
             >
               {title}
             </Link>
           ))}
-          <span className="cursor-pointer anim" onClick={register}>
+          <span className="cursor-pointer underlined" onClick={register}>
             REGISTER NOW
           </span>
         </ul>

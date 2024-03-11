@@ -12,13 +12,10 @@ const TitleDataMapCTA = ({
   subtitle,
   dataOneIcon,
   dataOne,
-  dataOneURL,
   dataTwoIcon,
   dataTwo,
-  dataTwoURL,
   dataThreeIcon,
   dataThree,
-  dataThreeURL,
   buttonTitle,
 }) => {
   return (
@@ -29,19 +26,19 @@ const TitleDataMapCTA = ({
       >
         <div className='flex flex-col lg:flex-row pt-20 pb-32 justify-between'>
           <div className='lg:w-1/2 w-full lg:pr-10 pb-10 lg:pb-0'>
-            <div className='text-2xl'>
+            <div className='text-2xl anim'>
               <BlockContent blocks={topSecondaryTitle} />
             </div>
 
-            <div className='lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 border border-t border-b-0 border-white space-y-6 py-6 border-x-0'>
+            <div className='lg:text-6xl text-4xl anim font-poppinsExtraBold uppercase pb-6 border border-t border-b-0 border-white space-y-6 py-6 border-x-0'>
               <BlockContent blocks={title} />
             </div>
-            <div className='pb-8 text-xs lg:text-lg'>
+            <div className='pb-8 text-xs lg:text-lg anim'>
               <BlockContent blocks={subtitle} />
             </div>
 
             <div className='pb-10'>
-              <div className='flex space-x-2 py-2'>
+              <div className='flex space-x-2 py-2 anim'>
                 <img
                   src={urlFor(dataOneIcon)}
                   alt='logo'
@@ -54,7 +51,7 @@ const TitleDataMapCTA = ({
                   />
                 </a>
               </div>
-              <div className='flex space-x-2 py-2'>
+              <div className='flex space-x-2 py-2 anim'>
                 <img
                   src={urlFor(dataTwoIcon)}
                   alt='logo'
@@ -62,7 +59,7 @@ const TitleDataMapCTA = ({
                 />
                 <BlockContent blocks={dataTwo} className='text-xs lg:text-lg' />
               </div>
-              <div className='flex space-x-2 py-2'>
+              <div className='flex space-x-2 py-2 anim'>
                 <img
                   src={urlFor(dataThreeIcon)}
                   alt='logo'
@@ -77,7 +74,7 @@ const TitleDataMapCTA = ({
             <div onClick={register}>
               <Button
                 title={buttonTitle}
-                classes='hover:bg-white hover:text-black'
+                classes='hover:bg-white hover:text-black fadeIn'
               />
             </div>
           </div>

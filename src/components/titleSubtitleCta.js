@@ -19,15 +19,17 @@ const TitleSubtitleCTA = ({
       >
         <div className="flex flex-col lg:flex-row pt-20 pb-32">
           <div className="lg:w-1/2 w-full lg:pr-10">
-            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6">
+            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
               <BlockContent blocks={title} />
             </div>
-            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            <div className="anim">
+              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            </div>
             <div className="pt-10">
               <a href={CTAURL}>
                 <Button
                   title={CTATitle}
-                  classes="hover:bg-white hover:text-black"
+                  classes="hover:bg-white hover:text-black fadeIn"
                 />
               </a>
             </div>

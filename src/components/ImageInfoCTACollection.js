@@ -20,16 +20,18 @@ const ImageInfoCTACollection = ({
       >
         <div className="py-20">
           <div className="lg:w-1/2 w-full lg:pr-10 text-white">
-            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6">
+            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
               <BlockContent blocks={title} />
             </div>
-            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            <div className="anim">
+              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            </div>
             {CTATitle && CTAURL && (
               <div className="pt-10">
                 <Button
                   link={CTAURL}
                   title={CTATitle}
-                  classes="hover:bg-white hover:text-black"
+                  classes="hover:bg-white hover:text-black fadeIn"
                 />
               </div>
             )}
