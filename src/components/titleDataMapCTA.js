@@ -12,10 +12,13 @@ const TitleDataMapCTA = ({
   subtitle,
   dataOneIcon,
   dataOne,
+  dataOneURL,
   dataTwoIcon,
   dataTwo,
+  dataTwoURL,
   dataThreeIcon,
   dataThree,
+  dataThreeURL,
   buttonTitle,
 }) => {
   return (
@@ -38,28 +41,33 @@ const TitleDataMapCTA = ({
             </div>
 
             <div className='pb-10'>
-              <div className='flex space-x-2 py-2 anim'>
+              <a
+                href={dataOneURL}
+                className='flex space-x-2 py-2 anim cursor-pointer'
+              >
                 <img
                   src={urlFor(dataOneIcon)}
                   alt='logo'
                   className='w-[20px]'
                 />
-                <a href={dataOneURL}>
-                  <BlockContent
-                    blocks={dataOne}
-                    className='text-xs lg:text-lg'
-                  />
-                </a>
-              </div>
-              <div className='flex space-x-2 py-2 anim'>
+                <BlockContent blocks={dataOne} className='text-xs lg:text-lg' />
+              </a>
+
+              <a
+                href={dataTwoURL}
+                className='flex space-x-2 py-2 anim cursor-pointer'
+              >
                 <img
                   src={urlFor(dataTwoIcon)}
                   alt='logo'
                   className='w-[20px]'
                 />
                 <BlockContent blocks={dataTwo} className='text-xs lg:text-lg' />
-              </div>
-              <div className='flex space-x-2 py-2 anim'>
+              </a>
+              <a
+                href={dataThreeURL}
+                className='flex space-x-2 py-2 anim cursor-pointer'
+              >
                 <img
                   src={urlFor(dataThreeIcon)}
                   alt='logo'
@@ -69,7 +77,7 @@ const TitleDataMapCTA = ({
                   blocks={dataThree}
                   className='text-xs lg:text-lg'
                 />
-              </div>
+              </a>
             </div>
             <div onClick={register}>
               <Button
