@@ -4,6 +4,7 @@ import ImageInfoCollection from "@/components/ImageInfoCollection";
 import Agenda from "@/components/Agenda";
 import ImageInfoCTACollection from "@/components/ImageInfoCTACollection";
 import TitleSubtitleCTA from "@/components/titleSubtitleCta";
+import TitleDataMapCTA from "@/components/titleDataMapCTA";
 
 const serializers = {
   marks: {
@@ -22,6 +23,7 @@ const serializers = {
       <ImageInfoCTACollection {...props.node} />
     ),
     titleSubtitleCTA: (props) => <TitleSubtitleCTA {...props.node} />,
+    titleDataMapCTA: (props) => <TitleDataMapCTA {...props.node} />,
   },
 };
 export default serializers;
