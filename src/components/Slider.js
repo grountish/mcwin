@@ -54,8 +54,10 @@ const Slider = ({ title, images }) => {
             ))}
           </Swiper>
           <div className="w-full flex items-center justify-center pt-10">
-            <div className="w-40">
-              <span className="swiper-pagination-dom">*</span>
+            <div className="w-80 flex justify-center">
+              <span className="swiper-pagination-dom flex justify-center">
+                *
+              </span>
             </div>
           </div>
 

@@ -3,13 +3,13 @@ import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
 import Button from "./Button";
 import SeparatorRight from "./SeparatorRight";
+import { register } from "@/utils/eventZilla";
 
 const ImageInfoCollection = ({
   backgroundImage,
   title,
   subtitle,
   CTATitle,
-  CTAURL,
   collection,
 }) => {
   return (
@@ -25,9 +25,8 @@ const ImageInfoCollection = ({
             </div>
             <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
             {CTATitle && (
-              <div className="pt-10">
+              <div className="pt-10" onClick={register}>
                 <Button
-                  link={CTAURL}
                   title={CTATitle}
                   classes="hover:bg-white hover:text-black"
                 />
