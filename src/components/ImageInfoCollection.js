@@ -3,13 +3,13 @@ import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
 import Button from "./Button";
 import SeparatorRight from "./SeparatorRight";
+import { register } from "@/utils/eventZilla";
 
 const ImageInfoCollection = ({
   backgroundImage,
   title,
   subtitle,
   CTATitle,
-  CTAURL,
   collection,
 }) => {
   return (
@@ -18,16 +18,15 @@ const ImageInfoCollection = ({
         className={`lg:pt-40 pt-12 bg-cover bg-no-repeat text-white relative`}
         style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
       >
-        <div className="flex flex-col lg:flex-row pt-20 pb-32 lg:px-20 px-7 text-white">
+        <div className="flex flex-col lg:flex-row pt-20 md:pb-32 lg:px-20 px-7 text-white pb-48">
           <div className="lg:w-1/2 w-full lg:pr-10">
             <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6">
               <BlockContent blocks={title} />
             </div>
             <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
             {CTATitle && (
-              <div className="pt-10">
+              <div className="pt-10" onClick={register}>
                 <Button
-                  link={CTAURL}
                   title={CTATitle}
                   classes="hover:bg-white hover:text-black"
                 />
@@ -41,7 +40,7 @@ const ImageInfoCollection = ({
         {collection.map((section, index) => {
           return (
             <div
-              className="flex flex-col justify-center items-center py-6 fadeUp"
+              className="flex flex-col  items-center py-6 fadeUp"
               key={index}
             >
               <div
@@ -55,7 +54,7 @@ const ImageInfoCollection = ({
                 <BlockContent blocks={section.subtitle} />
               </div>
               <img
-                className="w-20"
+                className="max-h-28 max-w-[210px] min-w-[170px]"
                 src={urlFor(section.logo)}
                 alt="company logo"
               />

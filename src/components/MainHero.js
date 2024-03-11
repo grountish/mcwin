@@ -81,7 +81,7 @@ const MainHero = ({
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-0">
+          <div className="lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-[36px]">
             <div className="relative rounded-lg">
               <video
                 poster="/video-placeholder.jpg"
