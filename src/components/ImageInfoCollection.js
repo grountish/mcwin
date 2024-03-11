@@ -39,10 +39,7 @@ const ImageInfoCollection = ({
       <div className="bg-matteWhite grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-12 xl:px-72 lg:px-40 py-12">
         {collection.map((section, index) => {
           return (
-            <div
-              className="flex flex-col  items-center py-6 fadeUp"
-              key={index}
-            >
+            <div className="flex flex-col  items-center py-6 anim" key={index}>
               <div
                 className="rounded-full h-40 w-40 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${urlFor(section.image)})` }}
