@@ -82,7 +82,7 @@ const MainHero = ({
                   key={index}
                   src={urlFor(f)}
                   alt="Pictu"
-                  className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn"
+                  className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn hover:scale-110 transition-transform duration-500 ease-in-out"
                 />
               );
             })}
