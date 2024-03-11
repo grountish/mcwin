@@ -90,9 +90,9 @@ const TitleDataMapCTA = ({
             <iframe
               className='rounded-2xl xl:h-[450px] xl:w-[600px] lg:h-[400px] lg:w-[450px] w-full h-[500px]'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.965647058245!2d-3.7000110999999998!3d40.45389730000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229ec696e4141%3A0x16108830bed29888!2sGreen%20Patio!5e0!3m2!1ses-419!2ses!4v1710164830601!5m2!1ses-419!2ses'
-              allowfullscreen=''
+              allowFullScreen=''
               loading='lazy'
-              referrerpolicy='no-referrer-when-downgrade'
+              referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
           </div>
         </div>
