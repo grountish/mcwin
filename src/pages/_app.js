@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
         delay: i * 0.1,
       });
     });
-  }, [router.pathname]);
+  }, [router.asPath]);
 
   useEffect(() => {
     const script = document.createElement("script");
