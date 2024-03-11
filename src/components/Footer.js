@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = ({ layout }) => {
   return (
-    <div className="bg-matteWhite p-6 lg:p-10">
+    <div className="bg-matteWhite p-6 lg:py-10 px-10 lg:px-20">
       <div className="w-full flex justify-between align-center fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue">
         <a
           className="cursor-pointer md:min-w-[300px]"
