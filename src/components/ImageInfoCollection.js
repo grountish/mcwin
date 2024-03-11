@@ -20,15 +20,17 @@ const ImageInfoCollection = ({
       >
         <div className="flex flex-col lg:flex-row pt-20 md:pb-32 lg:px-20 px-7 text-white pb-48">
           <div className="lg:w-1/2 w-full lg:pr-10">
-            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6">
+            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
               <BlockContent blocks={title} />
             </div>
-            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            <div className="anim">
+              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            </div>
             {CTATitle && (
               <div className="pt-10" onClick={register}>
                 <Button
                   title={CTATitle}
-                  classes="hover:bg-white hover:text-black"
+                  classes="hover:bg-white hover:text-black fadeIn"
                 />
               </div>
             )}
