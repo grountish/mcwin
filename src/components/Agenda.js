@@ -1,4 +1,3 @@
-import urlFor from "@/utils/imageUrlBuilder";
 import React from "react";
 import Button from "./Button";
 import { register } from "@/utils/eventZilla";

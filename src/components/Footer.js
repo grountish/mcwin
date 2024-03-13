@@ -27,7 +27,10 @@ const Footer = ({ layout }) => (
         <div className="md:min-w-[300px] pt-4 md:pt-0">
           <p>For special support,</p>
           <span className="pr-1">please contact</span>
-          <a href="mailto:ir@mcwin.info" className="font-bold">
+          <a
+            href="mailto:ir@mcwin.info&subject=Query McWin AIM 2024"
+            className="font-bold"
+          >
             IR@mcwin.info
           </a>
         </div>
