@@ -28,7 +28,7 @@ const Footer = ({ layout }) => (
           <p>For special support,</p>
           <span className="pr-1">please contact</span>
           <a
-            href="mailto:ir@mcwin.info&subject=Query McWin AIM 2024"
+            href="mailto:ir@mcwin.info?subject=Query McWin AIM 2024"
             className="font-bold"
           >
             IR@mcwin.info
