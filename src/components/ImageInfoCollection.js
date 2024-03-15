@@ -74,7 +74,7 @@ const ImageInfoCollection = ({
                 alt="more-speakers"
                 className="max-h-28 max-w-[210px] min-w-[170px]"
               />
-              <h4 className="py-4 text-mainBlue">{moreSpeakersText}</h4>
+              <h4 className="py-4 text-mainBlue text-xl">{moreSpeakersText}</h4>
             </div>
           </div>
         )}
