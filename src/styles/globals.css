@@ -150,3 +150,7 @@ ul {
     transform: scale(1);
   }
 }
+
+video {
+  object-fit: contain !important;
+}
