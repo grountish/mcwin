@@ -40,28 +40,32 @@ const ImageInfoCollection = ({
         <SeparatorRight />
       </div>
       <div className="bg-matteWhite ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-12 xl:px-72 lg:px-40 py-12">
+        <div className="grid grid-cols-2 space-x-4 md:space-x-0 md:grid-cols-2 lg:grid-cols-3 md:px-12 xl:px-72 lg:px-40 py-12">
           {collection.map(({ image, title, subtitle, logo }, index) => {
             return (
               <div
-                className="flex flex-col  items-center py-6 anim"
+                className="flex flex-col items-center justify-center py-6 anim"
                 key={index}
               >
-                <div
-                  className="rounded-full h-40 w-40 bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${urlFor(image)})` }}
-                ></div>
-                <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4">
-                  {title && <BlockContent blocks={title} />}
+                <div className="m-auto flex flex-col justify-center items-center text-center">
+                  <div
+                    className="rounded-full h-32 w-32  md:h-40 md:w-40 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${urlFor(image)})` }}
+                  ></div>
+                  <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4">
+                    {title && <BlockContent blocks={title} />}
+                  </div>
+                  <div className="w-10/12 text-center text-xs pb-3">
+                    {subtitle && <BlockContent blocks={subtitle} />}
+                  </div>
                 </div>
-                <div className="w-1/2 text-center text-xs pb-3">
-                  {subtitle && <BlockContent blocks={subtitle} />}
+                <div className="m-auto">
+                  <img
+                    className="h-[70px] object-contain m-auto"
+                    src={urlFor(logo)}
+                    alt="company logo"
+                  />
                 </div>
-                <img
-                  className="h-[17%] aspect-[16/9] object-contain"
-                  src={urlFor(logo)}
-                  alt="company logo"
-                />
               </div>
             );
           })}
