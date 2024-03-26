@@ -40,7 +40,7 @@ const ImageInfoCollection = ({
         <SeparatorRight />
       </div>
       <div className="bg-matteWhite ">
-        <div className="grid grid-cols-2 space-x-4 md:space-x-0 md:grid-cols-2 lg:grid-cols-3 md:px-12 xl:px-72 lg:px-40 py-12">
+        <div className="grid grid-cols-2 md:space-x-0 md:grid-cols-2 lg:grid-cols-3 md:px-12 px-2  xl:px-72 lg:px-40 py-12">
           {collection.map(({ image, title, subtitle, logo }, index) => {
             return (
               <div
