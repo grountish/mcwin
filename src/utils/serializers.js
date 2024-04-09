@@ -5,11 +5,12 @@ import Agenda from "@/components/Agenda";
 import ImageInfoCTACollection from "@/components/ImageInfoCTACollection";
 import TitleSubtitleCTA from "@/components/titleSubtitleCta";
 import TitleDataMapCTA from "@/components/titleDataMapCTA";
+import Streaming from "@/components/Streaming";
 
 const serializers = {
   marks: {
     link: ({ children, mark }) => (
-      <a href={mark.href} target='_blank' rel='noopener noreferer'>
+      <a href={mark.href} target="_blank" rel="noopener noreferer">
         {children}
       </a>
     ),
@@ -24,6 +25,7 @@ const serializers = {
     ),
     titleSubtitleCTA: (props) => <TitleSubtitleCTA {...props.node} />,
     titleDataMapCTA: (props) => <TitleDataMapCTA {...props.node} />,
+    programation: (props) => <Streaming {...props.node} />,
   },
 };
 export default serializers;

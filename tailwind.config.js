@@ -12,6 +12,7 @@ module.exports = {
         mainBlue: "#133F83",
         darkBlue: "#04193A",
         deepBlue: "#1E5EC4",
+        nightBlue: "#030F23",
       },
 
       fontSize: {
