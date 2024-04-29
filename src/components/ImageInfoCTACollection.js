@@ -45,12 +45,14 @@ const ImageInfoCTACollection = ({
                   key={index}
                 >
                   <div className="flex flex-col justify-between">
-                    <div
-                      className="rounded-t-2xl h-40 w-full bg-cover bg-center bg-no-repeat"
-                      style={{
-                        backgroundImage: `url(${urlFor(section.image)})`,
-                      }}
-                    ></div>
+                    {section.image && (
+                      <div
+                        className="rounded-t-2xl h-40 w-full bg-cover bg-center bg-no-repeat"
+                        style={{
+                          backgroundImage: `url(${urlFor(section.image)})`,
+                        }}
+                      ></div>
+                    )}
                     <div className="px-3 flex flex-col">
                       <div className="text-xs pt-4">
                         <BlockContent blocks={section.topSecondaryTitle} />
@@ -58,7 +60,7 @@ const ImageInfoCTACollection = ({
                       <div className="font-poppinsExtraBold text-lg pt-4">
                         <BlockContent blocks={section.title} />
                       </div>
-                      <div className="w-1/2 text-xs pb-2">
+                      <div className="w-2/3 text-xs pb-2">
                         <BlockContent blocks={section.subtitle} />
                       </div>
                     </div>
