@@ -13,7 +13,7 @@ const Agenda = ({ slots }) => {
                 {title}
               </h1>
               <div className='pt-20'>
-                <div className='grid grid-cols-3 font-semibold uppercase text-sm'>
+                <div className='grid grid-cols-3 font-semibold uppercase text-sm text-mainBlue pb-4'>
                   <h3>Time</h3>
                   <h3>Subject</h3>
                   <h3>Speakers</h3>
