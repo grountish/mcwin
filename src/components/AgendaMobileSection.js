@@ -39,7 +39,7 @@ const AgendaMobileSection = ({ events }) => {
             <Button
               title='View All'
               hasIcon
-              classes='bg-mainBlue !text-white !text-lg !text-semibold !w-full !justify-center'
+              classes='!bg-mainBlue !text-white !text-lg !text-semibold !w-full !justify-center'
             />
           </div>
         </div>
