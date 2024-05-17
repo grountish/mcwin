@@ -1,6 +1,6 @@
-import React from "react";
 import Button from "./Button";
 import { register } from "@/utils/eventZilla";
+import AgendaMobileSection from "./AgendaMobileSection";
 
 const Agenda = ({ slots }) => {
   return (
@@ -8,22 +8,22 @@ const Agenda = ({ slots }) => {
       <div className='flex flex-col justify-center items-start m-auto font-regular lg:border lg:border-deepBlue lg:rounded-3xl text-deepBlue bg-matteWhite lg:w-[950px] lg:py-24'>
         {slots?.map(({ _key, title, events }) => {
           return (
-            <div key={_key} className='py-8 px-12 w-full'>
+            <div key={_key} className='py-8 md:px-12 px-7 w-full'>
               <h1 className='pb-2 font-bold text-3xl border-b border-deepBlue'>
                 {title}
               </h1>
               <div className='pt-20'>
-                <div className='grid grid-cols-3 font-semibold uppercase text-sm text-mainBlue pb-4'>
+                <div className='md:grid grid-cols-3 font-semibold uppercase text-sm text-mainBlue pb-4 hidden'>
                   <h3>Time</h3>
                   <h3>Subject</h3>
                   <h3>Speakers</h3>
                 </div>
-
+                {/* desk version */}
                 {events?.map(({ _key, name, time, speaker }) => {
                   return (
                     <div
                       key={_key}
-                      className='grid grid-cols-3 pb-4 py-4 fadeInpt-3 border-t border-deepBlue text-sm lg:text-lg'
+                      className='hidden md:grid grid-cols-3 pb-4 py-4 fadeInpt-3 border-t border-deepBlue text-sm lg:text-lg'
                     >
                       <h2
                         className={`font-semibold ${
@@ -45,6 +45,8 @@ const Agenda = ({ slots }) => {
                     </div>
                   );
                 })}
+                {/* mobile version */}
+                <AgendaMobileSection events={events} />
               </div>
             </div>
           );
