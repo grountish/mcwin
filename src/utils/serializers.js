@@ -25,7 +25,7 @@ const serializers = {
     ),
     titleSubtitleCTA: (props) => <TitleSubtitleCTA {...props.node} />,
     titleDataMapCTA: (props) => <TitleDataMapCTA {...props.node} />,
-    programation: (props) => <Streaming {...props.node} />,
+    streamSchedule: (props) => <Streaming {...props.node} />,
   },
 };
 export default serializers;
