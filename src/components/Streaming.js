@@ -1,25 +1,26 @@
-import React, { useState } from "react";
-import Button from "./Button";
+import React, { useState } from 'react';
+import Button from './Button';
 
 const Streaming = ({ events }) => {
-  const [password, setPassword] = useState("");
-  const [typedPassword, setTypedPassword] = useState("");
+  const [password, setPassword] = useState('');
+  const [typedPassword, setTypedPassword] = useState('');
 
   return (
     <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
-      {password === "password" ? (
+      {password === 'password' ? (
         <>
           <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pt-24 pb-20 anim">
             Streaming
           </div>
-          <div className="flex w-full justify-between space-x-12">
+          <div className="flex w-full flex-col md:flex-row justify-between md:space-x-12">
             <div className="w-full">
               <iframe
                 className="w-full h-full fadeIn aspect-video rounded-xl"
-                src="https://www.youtube.com/embed/t-99hr9Vp74"
-              ></iframe>
+                src="https://www.youtube.com/embed/t-99hr9Vp74"></iframe>
             </div>
-            <div className="flex relative bg-nightBlue font-regular flex-col p-4 border-deepBlue rounded-2xl border text-white w-[500px] max-h-[600px]">
+            <div
+              className="flex relative bg-nightBlue font-regular flex-col p-4 border-deepBlue rounded-2xl border text-white
+             w-full md:w-[500px] max-h-[600px] mt-8">
               <h4 className="text-white pt-4 pb-8">Schedule</h4>
               <div className="overflow-scroll pb-20">
                 {events.map(({ _key, name, time, speaker }) => {
@@ -36,13 +37,6 @@ const Streaming = ({ events }) => {
                   );
                 })}
               </div>
-              <div
-                className="absolute bottom-0 left-0 w-full h-[160px] bg-red-500 z-10 rounded-2xl"
-                style={{
-                  background:
-                    "linear-gradient(0deg, #030F23 35%, rgba(255,255,255,0) 100%)",
-                }}
-              ></div>
             </div>
           </div>
         </>
