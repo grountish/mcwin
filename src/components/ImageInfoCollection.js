@@ -52,7 +52,7 @@ const ImageInfoCollection = ({
                     className="rounded-full h-32 w-32  md:h-40 md:w-40 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${urlFor(image)})` }}
                   ></div>
-                  <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4">
+                  <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4 leading-none pb-2">
                     {title && <BlockContent blocks={title} />}
                   </div>
                   <div className="w-10/12 text-center text-xs pb-3">
