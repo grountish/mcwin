@@ -9,17 +9,18 @@ const Streaming = ({ agenda }) => {
 
   return (
     <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white min-h-[90vh]">
-      {password === "password" ? (
+      {password === "AIM2024" ? (
         <>
           <div className='lg:text-6xl text-4xl font-poppinsExtraBold uppercase pt-24 pb-20 anim'>
             Streaming
           </div>
           <div className='flex w-full flex-col md:flex-row justify-between md:space-x-12'>
             <div className='w-full'>
-              <iframe
+              <img src='./streaming-placeholder.png' alt='' />
+              {/* <iframe
                 className='w-full h-full fadeIn aspect-video rounded-xl'
                 src='https://www.youtube.com/embed/t-99hr9Vp74'
-              ></iframe>
+              ></iframe> */}
             </div>
             <div
               className='lg:flex hidden relative bg-nightBlue font-regular flex-col p-4 border-deepBlue rounded-2xl border text-white
