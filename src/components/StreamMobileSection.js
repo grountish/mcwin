@@ -15,7 +15,7 @@ const StreamMobileSection = ({ agenda }) => {
             return (
               <div
                 key={_key}
-                className={`md:hidden flex justify-between pb-4 py-4 fadeInpt-3 border-t ${
+                className={`lg:hidden flex justify-between pb-4 py-4 fadeInpt-3 border-t ${
                   !speaker ? "border-t-deepBlue" : "border-t-white"
                 } text-sm lg:text-lg`}
               >
@@ -45,7 +45,7 @@ const StreamMobileSection = ({ agenda }) => {
             );
           })}
         {!showAll && (
-          <div className='w-full flex md:hidden fadeIn'>
+          <div className='w-full flex lg:hidden fadeIn'>
             <div onClick={() => setshowAll(true)} className='m-auto w-full'>
               <Button
                 title='View All'

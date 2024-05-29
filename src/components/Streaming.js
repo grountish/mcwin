@@ -14,7 +14,7 @@ const Streaming = ({ agenda }) => {
           <div className='lg:text-6xl text-4xl font-poppinsExtraBold uppercase pt-24 pb-20 anim'>
             Streaming
           </div>
-          <div className='flex w-full flex-col md:flex-row justify-between md:space-x-12'>
+          <div className='flex w-full flex-col lg:flex-row justify-between lg:space-x-12'>
             <div className='w-full'>
               <img src='./streaming-placeholder.png' alt='' />
               {/* <iframe
@@ -24,7 +24,7 @@ const Streaming = ({ agenda }) => {
             </div>
             <div
               className='lg:flex hidden relative bg-nightBlue font-regular flex-col p-4 border-deepBlue rounded-2xl border text-white
-             w-full md:w-[500px] max-h-[600px] mt-8 lg:mt-0'
+             w-full lg:w-[500px] max-h-[600px] mt-8 lg:mt-0'
             >
               <h4 className='text-white pt-4 pb-12'>Agenda</h4>
               <div className='overflow-scroll pb-20'>
