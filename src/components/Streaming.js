@@ -6,7 +6,6 @@ import StreamMobileSection from "./StreamMobileSection";
 const Streaming = ({ agenda }) => {
   const [password, setPassword] = useState("");
   const [typedPassword, setTypedPassword] = useState("");
-
   return (
     <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white min-h-[90vh]">
       {password === "AIM2024" ? (
@@ -16,11 +15,10 @@ const Streaming = ({ agenda }) => {
           </div>
           <div className='flex w-full flex-col lg:flex-row justify-between lg:space-x-12'>
             <div className='w-full'>
-              <img src='./streaming-placeholder.png' alt='' />
-              {/* <iframe
+              <iframe
                 className='w-full h-full fadeIn aspect-video rounded-xl'
-                src='https://www.youtube.com/embed/t-99hr9Vp74'
-              ></iframe> */}
+                src='https://www.youtube.com/embed/Rws5h7urz64?si=SnGPKEXeeTXtJIBy'
+              ></iframe>
             </div>
             <div
               className='lg:flex hidden relative bg-nightBlue font-regular flex-col p-4 border-deepBlue rounded-2xl border text-white
@@ -62,7 +60,7 @@ const Streaming = ({ agenda }) => {
             Streaming
           </div>
           <div className='w-1/2 space-y-10'>
-            <h4 className=' font-regular text-lg'>Insert password</h4>
+            <h4 className='font-regular text-lg'>Insert password</h4>
             <input
               type='password'
               value={typedPassword}
