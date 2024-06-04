@@ -6,6 +6,8 @@ import StreamMobileSection from "./StreamMobileSection";
 const Streaming = ({ agenda }) => {
   const [password, setPassword] = useState("");
   const [typedPassword, setTypedPassword] = useState("");
+  const [wrongPassword, setWrongPassword] = useState(false);
+
   return (
     <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white min-h-[90vh]">
       {password === "AIM2024" ? (
@@ -60,7 +62,13 @@ const Streaming = ({ agenda }) => {
             Streaming
           </div>
           <div className='w-1/2 space-y-10'>
-            <h4 className='font-regular text-lg'>Insert password</h4>
+            {wrongPassword ? (
+              <h4 className='text-red-200 font-regular text-lg'>
+                Wrong password, try again.
+              </h4>
+            ) : (
+              <h4 className='font-regular text-lg'>Insert password</h4>
+            )}
             <input
               type='password'
               value={typedPassword}
@@ -68,7 +76,18 @@ const Streaming = ({ agenda }) => {
               className='p-2 lg:w-[500px] w-[300px] border-b botder-white text-white bg-transparent focus:outline-none font-ExtralightItalic'
               onChange={(e) => setTypedPassword(e.target.value)}
             />
-            <div onClick={() => setPassword(typedPassword)}>
+            <div
+              onClick={() => {
+                if (typedPassword === "AIM2024") {
+                  setPassword(typedPassword);
+                } else {
+                  setWrongPassword(true);
+                  setTimeout(() => {
+                    setWrongPassword(false);
+                  }, 2000);
+                }
+              }}
+            >
               <Button
                 title='Go to streaming'
                 classes='hover:bg-white hover:text-black'
