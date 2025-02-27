@@ -71,7 +71,7 @@ const MainHero = ({
           </div>
         </div>
         <div className="border-y border-x-0 border-white flex flex-col lg:flex-row justify-center w-full lg:py-20 py-10">
-          <div className="lg:w-[600px] lg:mr-20 text-center lg:text-center pb-10 lg:pb-0 fadeIn">
+          <div className="lg:w-1/2  text-center lg:text-center pb-10 lg:pb-0 fadeIn">
             <h4 className="anim lg:text-2xl">{foundersText}</h4>
           </div>
           {founders && (

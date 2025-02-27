@@ -39,14 +39,14 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>McWin Capital Partners | Annual Investor Meeting 2024</title>
+        <title>McWin Capital Partners | Annual Investor Meeting 2025</title>
         <meta
           name="description"
           content="Empowering food evolution - Join us to accelerate the transformation of the world's food ecosystem- We invite you to be part of our event where we invest in companies whose breakthroughs will drive this revolution. Don't miss this opportunity to change the world with us!"
         />
         <meta
           property="og:title"
-          content="McWin Capital Partners | Annual Investor Meeting 2024"
+          content="McWin Capital Partners | Annual Investor Meeting 2025"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aimmcwin.com" />

@@ -17,12 +17,12 @@ const Footer = ({ layout }) => (
       </a>
       <div className="flex space-x-5 text-[8.5px] lg:text-[16px] m-auto  flex-1">
         <div className="lg:flex text-center hidden">
-          © 2024 McWin Capital Partners. <br /> All Rights Reserved.
+          © 2025 McWin Capital Partners. <br /> All Rights Reserved.
         </div>
       </div>
       <div className="flex space-x-5 flex-col text-right text-[8.5px] lg:text-[16px] ">
         <div className="lg:hidden block">
-          © 2024 McWin Capital Partners. <br /> All Rights Reserved.
+          © 2025 McWin Capital Partners. <br /> All Rights Reserved.
         </div>
         <div className="md:min-w-[300px] pt-4 md:pt-0">
           <p>For special support,</p>
