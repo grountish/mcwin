@@ -45,7 +45,7 @@ const Slider = ({ title, images }) => {
               prevEl: `.prev`,
             }}
           >
-            {images.map((image, index) => (
+            {images?.map((image, index) => (
               <SwiperSlide key={index} className="!my-auto">
                 <div className="flex flex-col justify-center items-center min-w-[300px]">
                   <img src={urlFor(image)} alt="" />

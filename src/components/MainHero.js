@@ -85,7 +85,7 @@ const MainHero = ({
             <h4 className='anim'>{foundersText}</h4>
           </div>
           <div className='w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20'>
-            {founders.map(({ image, url }, index) => {
+            {founders?.map(({ image, url }, index) => {
               return (
                 <a
                   href={url}
