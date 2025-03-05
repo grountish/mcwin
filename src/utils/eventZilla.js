@@ -1,3 +1,3 @@
 export const register = () => {
-  window.EventzillaBuyTickets("2138606803");
+  window.EventzillaBuyTickets("2138664530");
 };

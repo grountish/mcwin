@@ -14,7 +14,7 @@ const TitleSubtitleCTA = ({
   return (
     <div className='relative font-regular'>
       <div
-        className='py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white'
+        className='py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white min-h-screen'
         style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
       >
         <div className='flex flex-col lg:flex-row pt-20 pb-32'>
