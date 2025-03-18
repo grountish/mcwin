@@ -2,7 +2,6 @@ import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
 import Button from "./Button";
-import SeparatorRight from "./SeparatorRight";
 import { register } from "@/utils/eventZilla";
 
 const ImageInfoCollection = ({
@@ -37,7 +36,6 @@ const ImageInfoCollection = ({
             )}
           </div>
         </div>
-        <SeparatorRight />
       </div>
       <div className="bg-matteWhite ">
         <div className="grid grid-cols-2 md:space-x-0 md:grid-cols-2 lg:grid-cols-3 md:px-12 px-2  xl:px-72 lg:px-40 py-12">

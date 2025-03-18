@@ -2,11 +2,9 @@ import React from "react";
 import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
-import SeparatorRight from "./SeparatorRight";
 import { register } from "@/utils/eventZilla";
 
 const TitleDataMapCTA = ({
-  backgroundImage,
   topSecondaryTitle,
   title,
   subtitle,
@@ -24,8 +22,7 @@ const TitleDataMapCTA = ({
   return (
     <div className="relative font-regular">
       <div
-        className={`py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white`}
-        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
+        className="py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white"
       >
         <div className="flex flex-col lg:flex-row pt-20 pb-32 justify-between">
           <div className="lg:w-1/2 w-full lg:pr-10 pb-10 lg:pb-0">
@@ -97,7 +94,6 @@ const TitleDataMapCTA = ({
           </div>
         </div>
       </div>
-      <SeparatorRight />
     </div>
   );
 };

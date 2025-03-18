@@ -1,21 +1,17 @@
 import React from "react";
 import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
-import urlFor from "@/utils/imageUrlBuilder";
-import SeparatorRight from "./SeparatorRight";
 
 const TitleSubtitleCTA = ({
   title,
   subtitle,
   CTATitle,
   CTAURL,
-  backgroundImage,
 }) => {
   return (
     <div className='relative font-regular'>
       <div
         className='py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white min-h-screen'
-        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
       >
         <div className='flex flex-col lg:flex-row pt-20 pb-32'>
           <div className='lg:w-1/2 w-full lg:pr-10'>
@@ -38,7 +34,6 @@ const TitleSubtitleCTA = ({
           </div>
         </div>
       </div>
-      <SeparatorRight />
     </div>
   );
 };

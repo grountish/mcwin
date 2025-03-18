@@ -64,7 +64,7 @@ ul {
 }
 
 .swiper-pagination-bullet {
-  background: #1e5ec4 !important;
+  background: white !important;
   width: 16px !important;
   height: 16px !important;
   opacity: 1 !important;
@@ -72,7 +72,7 @@ ul {
 }
 
 .swiper-pagination-bullet-active {
-  background: #04193a !important;
+  background: #007AFF !important;
 }
 
 .underlined {

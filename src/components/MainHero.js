@@ -3,7 +3,6 @@ import Button from './Button';
 import BlockContent from '@sanity/block-content-to-react';
 import { getValidUrl } from '@/utils/validUrl';
 import urlFor from '@/utils/imageUrlBuilder';
-import SeparatorRight from './SeparatorRight';
 import serializers from '@/utils/serializers';
 import { register } from '@/utils/eventZilla';
 
@@ -22,11 +21,11 @@ const MainHero = ({
 }) => {
   return (
     <div className="relative font-regular">
-      <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-48 bg-slate-300 bg-[url('/main-section-bg-min.jpg')] bg-cover bg-no-repeat text-white">
+      <div className="lg:pt-48 test lg:px-20 pt-20 px-7 pb-48 bg-white bg-cover bg-no-repeat text-darkBlue">
         <div className="flex flex-col lg:flex-row pt-24 md:pt-[3vh] md:pb-40 pb-10">
           <div className="lg:w-1/2 w-full lg:pr-10">
             <div className="text-xl md:text-2xl fadeIn">{topHeader}</div>
-            <div className="border-t border-b-0 border-white space-y-6 py-6 border-x-0">
+            <div className="space-y-6 py-6 border-x-0">
               <BlockContent
                 blocks={title}
                 className="lg:text-6xl text-4xl font-poppinsExtraBold anim  drop-shadow-xl"
@@ -51,7 +50,7 @@ const MainHero = ({
             </div>
             <div className="pt-4 fadeIn">
               <div onClick={register}>
-                <Button title={buttonText} classes="hover:bg-white hover:text-black" />
+                <Button title={buttonText} classes="hover:bg-white hover:text-black border-darkBlue text-darkBlue" />
               </div>
             </div>
           </div>
@@ -70,7 +69,7 @@ const MainHero = ({
             <div className="text-right pt-2 font-lightItalic test anim">{videoText}</div>
           </div>
         </div>
-        <div className="border-y border-x-0 border-white flex flex-col lg:flex-row justify-center w-full lg:py-20 py-10">
+        <div className="border-y border-x-0 border-darkBlue flex flex-col lg:flex-row justify-center w-full lg:py-20 py-10">
           <div className="lg:w-1/2  text-center lg:text-center pb-10 lg:pb-0 fadeIn">
             <h4 className="anim lg:text-2xl">{foundersText}</h4>
           </div>
@@ -95,7 +94,6 @@ const MainHero = ({
           <BlockContent blocks={bottomText} />
         </div>
       </div>
-      <SeparatorRight />
     </div>
   );
 };

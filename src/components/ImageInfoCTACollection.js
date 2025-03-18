@@ -1,12 +1,10 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
-import SeparatorRight from "./SeparatorRight";
 import Button from "./Button";
 import Link from "next/link";
 
 const ImageInfoCTACollection = ({
-  backgroundImage,
   title,
   subtitle,
   CTATitle,
@@ -16,8 +14,7 @@ const ImageInfoCTACollection = ({
   return (
     <div className="relative">
       <div
-        className={`lg:py-40 lg:px-16 pt-12 px-7 bg-cover bg-no-repeat'`}
-        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
+        className='lg:py-40 lg:px-16 pt-24 px-7 bg-cover bg-no-repeat'
       >
         <div className="py-20">
           <div className="lg:w-1/2 w-full lg:pr-10 text-white">
@@ -80,7 +77,6 @@ const ImageInfoCTACollection = ({
           </div>
         </div>
       </div>
-      <SeparatorRight />
     </div>
   );
 };
