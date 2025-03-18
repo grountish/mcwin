@@ -1,10 +1,9 @@
-'use client';
-import Button from './Button';
-import BlockContent from '@sanity/block-content-to-react';
-import { getValidUrl } from '@/utils/validUrl';
-import urlFor from '@/utils/imageUrlBuilder';
-import serializers from '@/utils/serializers';
-import { register } from '@/utils/eventZilla';
+"use client";
+import Button from "./Button";
+import BlockContent from "@sanity/block-content-to-react";
+import { getValidUrl } from "@/utils/validUrl";
+import serializers from "@/utils/serializers";
+import { register } from "@/utils/eventZilla";
 
 const MainHero = ({
   title,
@@ -16,12 +15,11 @@ const MainHero = ({
   video,
   videoText,
   foundersText,
-  founders,
   bottomText,
 }) => {
   return (
     <div className="relative font-regular">
-      <div className="lg:pt-48 test lg:px-20 pt-20 px-7 pb-48 bg-white bg-cover bg-no-repeat text-darkBlue">
+      <div className="md:pt-48 test lg:px-20 pt-20 px-7 pb-20 bg-white bg-cover bg-no-repeat text-darkBlue">
         <div className="flex flex-col lg:flex-row pt-24 md:pt-[3vh] md:pb-40 pb-10">
           <div className="lg:w-1/2 w-full lg:pr-10">
             <div className="text-xl md:text-2xl fadeIn">{topHeader}</div>
@@ -31,18 +29,23 @@ const MainHero = ({
                 className="lg:text-6xl text-4xl font-poppinsExtraBold anim  drop-shadow-xl"
               />
               <div className="anim ">
-                <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+                <BlockContent
+                  blocks={subtitle}
+                  className="text-xs lg:text-lg"
+                />
               </div>
             </div>
             <div className="py-[3vh] space-y-6 text-xl">
               <div className="flex">
-                <img src="/calendar.svg" alt="calendar" className="pr-3" /> <span></span>
+                <img src="/calendar.svg" alt="calendar" className="pr-3" />{" "}
+                <span></span>
                 <div className="underlined fadeIn">
                   <BlockContent blocks={date} className="fadeIn" />
                 </div>
               </div>
               <div className="flex">
-                <img src="/location.svg" alt="location" className="pr-3" /> <span></span>
+                <img src="/location.svg" alt="location" className="pr-3" />{" "}
+                <span></span>
                 <div className="underlined fadeIn">
                   <BlockContent blocks={location} serializers={serializers} />
                 </div>
@@ -50,7 +53,10 @@ const MainHero = ({
             </div>
             <div className="pt-4 fadeIn">
               <div onClick={register}>
-                <Button title={buttonText} classes="hover:bg-white hover:text-black border-darkBlue text-darkBlue" />
+                <Button
+                  title={buttonText}
+                  classes="hover:bg-white hover:text-black border-darkBlue text-darkBlue"
+                />
               </div>
             </div>
           </div>
@@ -66,14 +72,19 @@ const MainHero = ({
                 src={getValidUrl(video)}
               />
             </div>
-            <div className="text-right pt-2 font-lightItalic test anim">{videoText}</div>
+            <div className="text-right pt-2 font-lightItalic test anim">
+              {videoText}
+            </div>
           </div>
         </div>
-        <div className="border-y border-x-0 border-darkBlue flex flex-col lg:flex-row justify-center w-full lg:py-20 py-10">
-          <div className="lg:w-1/2  text-center lg:text-center pb-10 lg:pb-0 fadeIn">
-            <h4 className="anim lg:text-2xl">{foundersText}</h4>
+        <div className="flex md:flex-row flex-col justify-between w-full border-t-2 border-t-darkBlue">
+          <h4 className="anim lg:text-2xl uppercase md:w-1/2 pt-8 pr-6">{foundersText}</h4>
+          <div className="anim border-white text-lg lg:text-2xl md:w-1/2 pt-8">
+            <BlockContent blocks={bottomText} />
           </div>
-          {founders && (
+        </div>
+
+        {/* {founders && (
             <div className="w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20">
               {founders?.map(({ image, url }, index) => {
                 return (
@@ -89,10 +100,7 @@ const MainHero = ({
               })}
             </div>
           )}
-        </div>
-        <div className="anim py-24 text-center md:w-1/2 mx-auto border-white text-lg lg:text-2xl">
-          <BlockContent blocks={bottomText} />
-        </div>
+        </div>*/}
       </div>
     </div>
   );
