@@ -53,10 +53,9 @@ const MainHero = ({
             </div>
             <div className="pt-4 fadeIn">
               <div onClick={register}>
-                <Button
-                  title={buttonText}
-                  classes="hover:bg-white hover:text-black border-darkBlue text-darkBlue"
-                />
+                <button className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border">
+                  {buttonText}
+                </button>
               </div>
             </div>
           </div>
@@ -78,7 +77,9 @@ const MainHero = ({
           </div>
         </div>
         <div className="flex md:flex-row flex-col justify-between w-full border-t-2 border-t-darkBlue">
-          <h4 className="anim lg:text-2xl uppercase md:w-1/2 pt-8 pr-6">{foundersText}</h4>
+          <h4 className="anim lg:text-2xl uppercase md:w-1/2 pt-8 pr-6">
+            {foundersText}
+          </h4>
           <div className="anim border-white text-lg lg:text-2xl md:w-1/2 pt-8">
             <BlockContent blocks={bottomText} />
           </div>
