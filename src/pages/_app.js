@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://aimmcwin.com" />
         <meta
           property="og:image"
-          content="https://cdn.sanity.io/images/9nxeopkt/production/d056adf40291633deb5a5ae8190f74cc6d290ebf-1372x720.png?h=400&fit=max"
+          content="https://cdn.sanity.io/images/9nxeopkt/production/f79a5a6dcd3faac1d9d820599371d85ccf35646c-1814x760.jpg?w=2000&fit=max&auto=format&dpr=3"
         />
         <link
           rel="icon"
