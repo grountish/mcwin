@@ -2,7 +2,7 @@ import urlFor from "@/utils/imageUrlBuilder";
 import React from "react";
 
 const Footer = ({ layout }) => (
-  <div className="bg-matteWhite p-6 lg:py-10 px-10 lg:px-20">
+  <div className="bg-white p-6 lg:py-10 px-10 lg:px-20">
     <div className="w-full flex  fadeIn font-regular text-darkBlue border-t-2 lg:pt-6 pt-3 border-darkBlue">
       <a
         className="cursor-pointer md:min-w-[300px] flex-1"

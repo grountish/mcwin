@@ -29,9 +29,13 @@ const MainHero = ({
                   blocks={title}
                   className="lg:text-6xl text-4xl font-poppinsExtraBold anim  drop-shadow-xl"
                 />
-                 <div className="flex flex-col">
-                  <span className="font-poppinsExtraBold text-2xl leading-[30px] tracking-normal">EMPOWERING FOOD EVOLUTION</span>
-                  <span className="font-regular text-2xl leading-[30px] tracking-normal">Innovate | Solve | Scale</span>
+                <div className="flex flex-col">
+                  <span className="font-poppinsExtraBold text-2xl leading-[30px] tracking-normal">
+                    EMPOWERING FOOD EVOLUTION
+                  </span>
+                  <span className="font-regular text-2xl leading-[30px] tracking-normal">
+                    Innovate | Solve | Scale
+                  </span>
                 </div>
                 <div className="anim w-[80%]">
                   <BlockContent
@@ -48,7 +52,6 @@ const MainHero = ({
                     <BlockContent blocks={date} className="fadeIn" />
                   </div>
                 </div>
-                {/* test */}
                 <div className="flex">
                   <img src="/location.svg" alt="location" className="pr-3" />{" "}
                   <span></span>
@@ -58,11 +61,12 @@ const MainHero = ({
                 </div>
               </div>
               <div className="pt-4 fadeIn">
-                <div onClick={register}>
-                  <button className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2">
-                    {buttonText}
-                  </button>
-                </div>
+                <button
+                  onClick={register}
+                  className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
+                >
+                  {buttonText}
+                </button>
               </div>
             </div>
             <div className="lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-[36px]">
@@ -114,7 +118,11 @@ const MainHero = ({
       <div className="md:py-20 lg:px-20 py-6 px-7 pb-20">
         <div className="flex flex-col gap-10 justify-between w-full text-white">
           <div className="w-4/5 mx-auto font-regular text-2xl leading-[30px] tracking-normal text-center">
-            <span>The McWin Founders and Partners - Henry McGovern, Steve K. Winegar, Guillaume Charlin, Martin Davalos, Harry Goss and Troy Weeks will all be in attendance.</span>
+            <span>
+              The McWin Founders and Partners - Henry McGovern, Steve K.
+              Winegar, Guillaume Charlin, Martin Davalos, Harry Goss and Troy
+              Weeks will all be in attendance.
+            </span>
           </div>
           <h4 className="w-3/5 mx-auto font-poppinsBold text-3xl leading-[34px] tracking-normal text-center uppercase">
             {foundersText}
