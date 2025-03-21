@@ -48,6 +48,7 @@ const MainHero = ({
                     <BlockContent blocks={date} className="fadeIn" />
                   </div>
                 </div>
+                {/* test */}
                 <div className="flex">
                   <img src="/location.svg" alt="location" className="pr-3" />{" "}
                   <span></span>
