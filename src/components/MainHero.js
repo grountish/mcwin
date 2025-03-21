@@ -15,7 +15,6 @@ const MainHero = ({
   video,
   videoText,
   foundersText,
-  bottomText,
 }) => {
   return (
     <div>
@@ -82,7 +81,7 @@ const MainHero = ({
                   src={getValidUrl(video)}
                 />
               </div>
-              <div className="text-right pt-2 font-lightItalic test anim">
+              <div className="text-right pt-2 test anim font-bold">
                 {videoText}
               </div>
             </div>

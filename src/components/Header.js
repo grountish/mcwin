@@ -52,8 +52,8 @@ const Header = ({ layout }) => {
 
   return (
     <div className='z-50 w-full bg-darkBlue absolute top-0 left-0 text-white'>
-      <div className='flex gap-x-96 lg:px-20 px-6 lg:py-14 py-10'>
-        <div className='flex lg:hidden items-center  lg:self-center justify-between h-16 lg:mr-auto cursor-pointer'>
+      <div className='flex items-end justify-between lg:px-20 px-6 lg:py-14 py-10'>
+        <div className='flex lg:hidden items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer'>
           <img className='h-12' src={urlFor(mainLogo)} alt='primary logo' />
         </div>
         <div className='lg:hidden'>
@@ -65,18 +65,18 @@ const Header = ({ layout }) => {
             {burgerIcon}
           </button>
         </div>
-        <div className='hidden lg:flex items-center lg:self-center justify-between h-16  cursor-pointer'>
+        <div className='hidden lg:flex items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer'>
           <span onClick={() => router.push("/")} className='mr-auto'>
             {mainLogo && (
               <img
-                className='h-16 md:h-20'
+                className='h-14'
                 src={urlFor(mainLogo)}
                 alt='primary logo'
               />
             )}
           </span>
         </div>
-        <ul className='hidden w-full lg:flex justify-between uppercase lg:items-center !list-none'>
+        <ul className='hidden lg:flex uppercase lg:items-center lg:w-auto lg:space-x-10 !list-none'>
           {header.map(({ slug, title }, i) => (
             <Link
               key={i}
