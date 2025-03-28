@@ -14,7 +14,9 @@ module.exports = {
         deepBlue: "#1E5EC4",
         nightBlue: "#030F23",
       },
-
+      backgroundImage: {
+        'mcwin-gradient': 'radial-gradient(ellipse at center, #0d1c42 0%, #040c1e 100%)',
+      },
       fontSize: {
         "2xs": "0.625rem",
         "3xs": "0.5rem",

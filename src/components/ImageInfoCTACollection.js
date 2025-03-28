@@ -14,7 +14,7 @@ const ImageInfoCTACollection = ({
   return (
     <div className="relative">
       <div
-        className='lg:py-40 lg:px-16 pt-24 px-7 bg-cover bg-no-repeat'
+        className='lg:py-40 lg:px-16 pt-24 px-7 bg-mcwin-gradient'
       >
         <div className="py-20">
           <div className="lg:w-1/2 w-full lg:pr-10 text-white">

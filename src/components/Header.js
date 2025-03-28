@@ -8,18 +8,16 @@ const Header = ({ layout }) => {
   const { mainLogo = "", header = [] } = layout;
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [path, setPath] = useState("");
+
   const handleMenuOpen = () => {
     setMenuOpen((b) => !b);
   };
+
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
-  useEffect(() => {
-    setPath(window.location.pathname);
-    menuOpen && handleMenuOpen();
-  }, [router.asPath]);
+  const path = router.pathname;
 
   const burgerIcon = (
     <svg
@@ -51,7 +49,11 @@ const Header = ({ layout }) => {
   );
 
   return (
-    <div className='z-50 w-full bg-darkBlue absolute top-0 left-0 text-white'>
+    <div
+      className={`z-50 w-full absolute top-0 left-0 text-white ${
+        path === "/" ? "bg-mcwin-gradient" : ""
+      }`}
+    >
       <div className='flex items-end justify-between lg:px-20 px-6 lg:py-14 py-10'>
         <div className='flex lg:hidden items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer'>
           <img className='h-12' src={urlFor(mainLogo)} alt='primary logo' />
@@ -69,7 +71,7 @@ const Header = ({ layout }) => {
           <span onClick={() => router.push("/")} className='mr-auto'>
             {mainLogo && (
               <img
-                className='h-14'
+                className='h-16'
                 src={urlFor(mainLogo)}
                 alt='primary logo'
               />
@@ -92,9 +94,8 @@ const Header = ({ layout }) => {
           ))}
         </ul>
       </div>
-      {/* 
-          MOBILE
-               */}
+
+      {/* MOBILE MENU */}
       <div
         className={`fixed top-0 bottom-0 left-0 px-9 py-3 transition-all duration-[450ms] overflow-y-auto transform bg-black opacity-90 w-full z-100 block lg:hidden overflow-x-hidden ${
           !menuOpen ? "translate-x-[150vw]" : ""

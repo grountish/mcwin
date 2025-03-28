@@ -5,7 +5,6 @@ import Button from "./Button";
 import { register } from "@/utils/eventZilla";
 
 const ImageInfoCollection = ({
-  backgroundImage,
   title,
   subtitle,
   CTATitle,
@@ -15,8 +14,7 @@ const ImageInfoCollection = ({
   return (
     <div className="font-regular">
       <div
-        className={`lg:pt-40 pt-12 bg-cover bg-no-repeat text-white relative`}
-        style={{ backgroundImage: `url(${urlFor(backgroundImage)})` }}
+        className="lg:pt-40 pt-12 bg-mcwin-gradient text-white relative"
       >
         <div className="flex flex-col lg:flex-row pt-20 md:pb-32 lg:px-20 px-7 text-white pb-48">
           <div className="lg:w-1/2 w-full lg:pr-10">

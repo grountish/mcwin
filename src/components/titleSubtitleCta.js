@@ -10,9 +10,7 @@ const TitleSubtitleCTA = ({
 }) => {
   return (
     <div className='relative font-regular'>
-      <div
-        className='py-36 lg:px-20 px-7 bg-cover bg-no-repeat text-white min-h-screen'
-      >
+      <div className='py-36 lg:px-20 px-7 bg-mcwin-gradient text-white min-h-screen'>
         <div className='flex flex-col lg:flex-row pt-20 pb-32'>
           <div className='lg:w-1/2 w-full lg:pr-10'>
             <div className='lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim'>
