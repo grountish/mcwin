@@ -4,8 +4,8 @@ import BlockContent from "@sanity/block-content-to-react";
 
 const Agenda = ({ slots }) => {
   return (
-    <div className='bg-matteWhite pt-12 bg-[url("/bg-agenda.svg")] bg-cover bg-no-repeat'>
-      <div className='flex flex-col justify-center items-start m-auto font-regular lg:border lg:border-deepBlue lg:rounded-3xl text-deepBlue bg-matteWhite lg:w-[950px] lg:py-24'>
+    <div className='lg:pt-40 pt-12'>
+      <div className='flex flex-col justify-center items-start m-auto font-regular bg-white lg:border lg:border-deepBlue lg:rounded-3xl text-deepBlue lg:w-[950px] lg:py-24'>
         {slots?.map(({ _key, title, events }) => {
           return (
             <div key={_key} className='py-8 md:px-12 px-7 w-full'>
