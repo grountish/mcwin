@@ -1,7 +1,6 @@
 import React from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import urlFor from "@/utils/imageUrlBuilder";
-import Button from "./Button";
 import { register } from "@/utils/eventZilla";
 
 const ImageInfoCollection = ({
@@ -12,40 +11,43 @@ const ImageInfoCollection = ({
   moreSpeakersText,
 }) => {
   return (
-    <div className="font-regular">
-      <div
-        className="lg:pt-40 pt-12 bg-mcwin-gradient text-white relative"
-      >
-        <div className="flex flex-col lg:flex-row pt-20 md:pb-32 lg:px-20 px-7 text-white pb-48">
-          <div className="lg:w-1/2 w-full lg:pr-10">
-            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
-              <BlockContent blocks={title} />
-            </div>
-            <div className="anim">
-              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
-            </div>
-            {CTATitle && (
-              <div className="pt-10" onClick={register}>
-                <Button
-                  title={CTATitle}
-                  classes="hover:bg-white hover:text-black fadeIn"
-                />
-              </div>
-            )}
+    <div className="font-regular flex flex-col lg:pt-40 pt-24 bg-white">
+      <div className="flex flex-col lg:flex-row pt-20 px-7 lg:px-20 text-darkBlue">
+        
+        {/* LEFT TEXT BLOCK */}
+        <div className="w-full lg:w-[35%]">
+          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
+            <BlockContent blocks={title} />
           </div>
+          <div className="anim pb-6">
+            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+          </div>
+          {CTATitle && (
+            <button
+              onClick={register}
+              className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
+            >
+              {CTATitle}
+            </button>
+          )}
         </div>
-      </div>
-      <div className="bg-matteWhite ">
-        <div className="grid grid-cols-2 md:space-x-0 md:grid-cols-2 lg:grid-cols-3 md:px-12 px-2  xl:px-72 lg:px-40 py-12">
-          {collection.map(({ image, title, subtitle, logo }, index) => {
-            return (
+
+        {/* RIGHT SPEAKERS BLOCK */}
+        <div className="w-full lg:w-[65%] flex justify-end items-start pt-12 lg:pt-0 lg:pr-12">
+          <div className="grid gap-x-8 gap-y-10 w-full"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            }}
+          >
+            {collection.map(({ image, title, subtitle, logo }, index) => (
               <div
                 className="flex flex-col items-center justify-center py-6 anim"
                 key={index}
               >
-                <div className="m-auto flex flex-col justify-center items-center text-center">
+                <div className="m-auto flex flex-col justify-center items-center text-center w-full">
                   <div
-                    className="rounded-full h-32 w-32  md:h-40 md:w-40 bg-cover bg-center bg-no-repeat"
+                    className="rounded-xl w-full aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
                     style={{ backgroundImage: `url(${urlFor(image)})` }}
                   ></div>
                   <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4 leading-none pb-2">
@@ -57,28 +59,30 @@ const ImageInfoCollection = ({
                 </div>
                 <div className="m-auto">
                   <img
-                    className="h-[70px] object-contain m-auto"
+                    className="h-[15px] object-contain m-auto"
                     src={urlFor(logo)}
                     alt="company logo"
                   />
                 </div>
               </div>
-            );
-          })}
-        </div>
-        {moreSpeakersText && (
-          <div className="w-full flex justify-center pb-10">
-            <div className="flex justify-center items-center flex-col">
-              <img
-                src="/more-speakers.svg"
-                alt="more-speakers"
-                className="max-h-28 max-w-[210px] min-w-[170px]"
-              />
-              <h4 className="py-4 text-mainBlue text-xl">{moreSpeakersText}</h4>
-            </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
+
+      {/* MORE SPEAKERS SECTION */}
+      {moreSpeakersText && (
+        <div className="w-full flex justify-center pb-10">
+          <div className="flex justify-center items-center flex-col">
+            <img
+              src="/more-speakers.svg"
+              alt="more-speakers"
+              className="max-h-28 max-w-[210px] min-w-[170px]"
+            />
+            <h4 className="py-4 text-mainBlue text-xl">{moreSpeakersText}</h4>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

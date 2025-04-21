@@ -21,18 +21,18 @@ const TitleDataMapCTA = ({
 }) => {
   return (
     <div className="relative font-regular">
-      <div
-        className="py-36 lg:px-20 px-7 bg-mcwin-gradient text-white"
-      >
+      <div className="py-36 lg:px-20 px-7 bg-white text-darkBlue">
         <div className="flex flex-col lg:flex-row pt-20 pb-32 justify-between">
+          {/* LEFT SIDE */}
           <div className="lg:w-1/2 w-full lg:pr-10 pb-10 lg:pb-0">
             <div className="text-2xl anim">
               <BlockContent blocks={topSecondaryTitle} />
             </div>
 
-            <div className="lg:text-6xl text-4xl anim font-poppinsExtraBold uppercase pb-6 border border-t border-b-0 border-white space-y-6 py-6 border-x-0">
+            <div className="lg:text-6xl text-4xl anim font-poppinsExtraBold uppercase pb-6 border border-t border-b-0 border-darkBlue space-y-6 py-6 border-x-0">
               <BlockContent blocks={title} />
             </div>
+
             <div className="pb-8 text-xs lg:text-lg anim">
               <BlockContent blocks={subtitle} />
             </div>
@@ -40,7 +40,7 @@ const TitleDataMapCTA = ({
             <div className="pb-10">
               <a
                 href={dataOneURL}
-                className="flex space-x-2 py-2 anim cursor-pointer"
+                className="flex space-x-2 py-2 anim cursor-pointer items-center"
               >
                 <img
                   src={urlFor(dataOneIcon)}
@@ -52,7 +52,7 @@ const TitleDataMapCTA = ({
 
               <a
                 href={dataTwoURL}
-                className="flex space-x-2 py-2 anim cursor-pointer"
+                className="flex space-x-2 py-2 anim cursor-pointer items-center"
               >
                 <img
                   src={urlFor(dataTwoIcon)}
@@ -61,9 +61,10 @@ const TitleDataMapCTA = ({
                 />
                 <BlockContent blocks={dataTwo} className="text-xs lg:text-lg" />
               </a>
+
               <a
                 href={dataThreeURL}
-                className="flex space-x-2 py-2 anim cursor-pointer"
+                className="flex space-x-2 py-2 anim cursor-pointer items-center"
               >
                 <img
                   src={urlFor(dataThreeIcon)}
@@ -76,13 +77,16 @@ const TitleDataMapCTA = ({
                 />
               </a>
             </div>
-            <div onClick={register}>
-              <Button
-                title={buttonTitle}
-                classes="hover:bg-white hover:text-black fadeIn"
-              />
+
+            <div
+              onClick={register}
+              className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border"
+            >
+              {buttonTitle}
             </div>
           </div>
+
+          {/* RIGHT SIDE - MAP */}
           <div className="pt-7">
             <iframe
               className="rounded-2xl xl:h-[450px] xl:w-[600px] lg:h-[400px] lg:w-[450px] w-full h-[500px]"

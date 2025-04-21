@@ -114,16 +114,19 @@ const MainHero = ({
         </div>*/}
         </div>
       </div>
-      <div className="md:py-20 lg:px-20 py-6 px-7 pb-20">
+      <div
+        className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/mainHeroBgImg.jpg')" }}
+      >
         <div className="flex flex-col gap-10 justify-between w-full text-white">
-          <div className="w-4/5 mx-auto font-regular text-2xl leading-[30px] tracking-normal text-center">
+          <div className="w-4/5 mx-auto font-regular md:text-2xl text-md md:leading-[30px] tracking-normal text-center">
             <span>
               The McWin Founders and Partners - Henry McGovern, Steve K.
               Winegar, Guillaume Charlin, Martin Davalos, Harry Goss and Troy
               Weeks will all be in attendance.
             </span>
           </div>
-          <h4 className="w-3/5 mx-auto font-poppinsBold text-3xl leading-[34px] tracking-normal text-center uppercase">
+          <h4 className="w-3/5 mx-auto font-poppinsBold md:text-3xl text-xl md:leading-[34px] tracking-normal text-center uppercase">
             {foundersText}
           </h4>
         </div>

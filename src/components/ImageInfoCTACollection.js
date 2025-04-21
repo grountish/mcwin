@@ -12,68 +12,68 @@ const ImageInfoCTACollection = ({
   collection,
 }) => {
   return (
-    <div className="relative">
-      <div
-        className='lg:py-40 lg:px-16 pt-24 px-7 bg-mcwin-gradient'
-      >
-        <div className="py-20">
-          <div className="lg:w-1/2 w-full lg:pr-10 text-white">
-            <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
-              <BlockContent blocks={title} />
-            </div>
-            <div className="anim">
-              <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
-            </div>
-            {CTATitle && CTAURL && (
-              <div className="pt-10">
-                <Button
-                  link={CTAURL}
-                  title={CTATitle}
-                  classes="hover:bg-white hover:text-black fadeIn"
-                />
-              </div>
-            )}
+    <div className="relative font-regular flex flex-col lg:py-40 py-24 text-darkBlue bg-white">
+      <div className="flex flex-col lg:flex-row pt-20 px-7 lg:px-20">
+        <div className="w-full lg:w-[35%]">
+          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
+            <BlockContent blocks={title} />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-[55vw] mx-auto md:py-12 py-20">
-            {collection.map((section, index) => {
-              return (
-                <div
-                  className="flex flex-col justify-between text-white border border-white rounded-2xl m-4 pb-3 fadeIn"
-                  key={index}
-                >
-                  <div className="flex flex-col justify-between">
-                    {section.image && (
-                      <div
-                        className="rounded-t-2xl h-40 w-full bg-cover bg-center bg-no-repeat"
-                        style={{
-                          backgroundImage: `url(${urlFor(section.image)})`,
-                        }}
-                      ></div>
-                    )}
-                    <div className="px-3 flex flex-col">
-                      <div className="text-xs pt-4">
-                        <BlockContent blocks={section.topSecondaryTitle} />
-                      </div>
-                      <div className="font-poppinsExtraBold text-lg pt-4">
-                        <BlockContent blocks={section.title} />
-                      </div>
-                      <div className="w-2/3 text-xs pb-2">
-                        <BlockContent blocks={section.subtitle} />
-                      </div>
+          <div className="anim pb-6">
+            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+          </div>
+          {CTATitle && CTAURL && (
+            <div className="pt-10">
+              <Button
+                link={CTAURL}
+                title={CTATitle}
+                classes="hover:bg-white hover:text-black fadeIn"
+              />
+            </div>
+          )}
+        </div>
+        <div className="w-full lg:w-[65%] flex justify-end items-start pt-12 lg:pt-0 lg:pr-12">
+          <div
+            className="grid gap-x-8 gap-y-10 w-full"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            }}
+          >
+            {collection.map((section, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-between text-darkBlue border border-darkBlue rounded-2xl overflow-hidden fadeIn"
+              >
+                <div className="flex flex-col justify-between">
+                  {section.image && (
+                    <div
+                      className="rounded-t-2xl w-full aspect-[3/2] bg-cover bg-center bg-no-repeat"
+                      style={{
+                        backgroundImage: `url(${urlFor(section.image)})`,
+                      }}
+                    ></div>
+                  )}
+                  <div className="px-4 flex flex-col pt-4">
+                    <div className="text-xs pb-2">
+                      <BlockContent blocks={section.topSecondaryTitle} />
+                    </div>
+                    <div className="font-poppinsExtraBold text-lg pb-2">
+                      <BlockContent blocks={section.title} />
+                    </div>
+                    <div className="text-xs pb-4">
+                      <BlockContent blocks={section.subtitle} />
                     </div>
                   </div>
-
-                  <div className="pt-10 text-center mx-3">
-                    <Link href={section.buttonUrl} target={"_blank"}>
-                      <Button
-                        title={section.buttonTitle}
-                        classes="text-white !px-6 !py-3 !text-base !w-full"
-                      />
-                    </Link>
-                  </div>
                 </div>
-              );
-            })}
+                <div className="pt-6 text-center px-4 pb-4">
+                  <Link href={section.buttonUrl} target="_blank">
+                    <div className="flex items-center justify-center lg:px-20 lg:py-5 transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border !px-6 !py-3 !text-base !w-full">
+                      {section.buttonTitle}
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
