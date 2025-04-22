@@ -16,7 +16,7 @@ const ImageInfoCTACollection = ({
       <div className="flex flex-col lg:flex-row pt-20 px-7 lg:px-20">
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[20%]">
-          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim max-w-12">
+          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
             <BlockContent blocks={title} />
           </div>
           <div className="anim pb-6">
@@ -34,8 +34,8 @@ const ImageInfoCTACollection = ({
         </div>
 
         {/* RIGHT COLLECTION BLOCK */}
-        <div className="w-full lg:w-[75%] flex justify-end items-start pt-12 lg:pt-0">
-          <div className="flex flex-wrap gap-x-8 gap-y-10 w-full justify-center lg:justify-end">
+        <div className="w-full lg:w-[80%] flex justify-end items-start pt-12 lg:pt-0">
+          <div className="flex flex-wrap gap-x-8 gap-y-10 justify-start" style={{ maxWidth: 'calc(261px * 3 + 32px * 2)' }}>
             {collection.map((section, index) => (
               <div
                 key={index}
@@ -64,7 +64,7 @@ const ImageInfoCTACollection = ({
                 </div>
                 <div className="pt-6 text-center px-4 pb-4">
                   <Link href={section.buttonUrl} target="_blank">
-                    <div className="flex items-center justify-center lg:px-20 lg:py-5 transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border !px-6 !py-3 !text-base !w-full">
+                    <div className="flex items-center justify-center transition duration-300 rounded-full font-poppinsExtraBold text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border px-6 py-3 w-full">
                       {section.buttonTitle}
                     </div>
                   </Link>
