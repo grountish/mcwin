@@ -30,7 +30,7 @@ const NewPage = ({ page, layoutData }) => {
     return <div>Page not found</div>;
   }
   return (
-    <div className="w-screen">
+    <div className="w-screen bg-white">
       <Header layout={layoutData} />
       <div className={changeClass}>
         <BlockContent blocks={page.Blocks} serializers={serializers} />

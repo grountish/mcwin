@@ -12,7 +12,8 @@ const ImageInfoCollection = ({
 }) => {
   return (
     <div className="font-regular flex flex-col lg:pt-40 pt-24 bg-white">
-      <div className="flex flex-col lg:flex-row pt-20 px-7 lg:px-20 text-darkBlue">
+      
+      <div className="flex flex-col lg:flex-row items-start pt-20 px-7 lg:px-20 text-darkBlue">
         
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[35%]">
@@ -33,8 +34,9 @@ const ImageInfoCollection = ({
         </div>
 
         {/* RIGHT SPEAKERS BLOCK */}
-        <div className="w-full lg:w-[65%] flex justify-end items-start pt-12 lg:pt-0 lg:pr-12">
-          <div className="grid gap-x-8 gap-y-10 w-full"
+        <div className="w-full lg:w-[65%] flex justify-end items-start lg:pt-0">
+          <div 
+            className="grid gap-y-10 w-full"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -47,7 +49,7 @@ const ImageInfoCollection = ({
               >
                 <div className="m-auto flex flex-col justify-center items-center text-center w-full">
                   <div
-                    className="rounded-xl w-full aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
+                    className="rounded-xl w-full md:max-w-[256px] aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
                     style={{ backgroundImage: `url(${urlFor(image)})` }}
                   ></div>
                   <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4 leading-none pb-2">
@@ -68,6 +70,7 @@ const ImageInfoCollection = ({
             ))}
           </div>
         </div>
+
       </div>
 
       {/* MORE SPEAKERS SECTION */}

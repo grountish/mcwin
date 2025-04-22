@@ -14,8 +14,9 @@ const ImageInfoCTACollection = ({
   return (
     <div className="relative font-regular flex flex-col lg:py-40 py-24 text-darkBlue bg-white">
       <div className="flex flex-col lg:flex-row pt-20 px-7 lg:px-20">
+        {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[35%]">
-          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
+          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim max-w-12">
             <BlockContent blocks={title} />
           </div>
           <div className="anim pb-6">
@@ -31,18 +32,14 @@ const ImageInfoCTACollection = ({
             </div>
           )}
         </div>
-        <div className="w-full lg:w-[65%] flex justify-end items-start pt-12 lg:pt-0 lg:pr-12">
-          <div
-            className="grid gap-x-8 gap-y-10 w-full"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            }}
-          >
+
+        {/* RIGHT COLLECTION BLOCK */}
+        <div className="w-full lg:w-[65%] flex justify-end items-start pt-12 lg:pt-0 ">
+          <div className="flex flex-wrap gap-x-8 gap-y-10 w-full justify-center lg:justify-end">
             {collection.map((section, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-between text-darkBlue border border-darkBlue rounded-2xl overflow-hidden fadeIn"
+                className="flex flex-col justify-between text-darkBlue border border-darkBlue rounded-2xl overflow-hidden fadeIn w-[261px]"
               >
                 <div className="flex flex-col justify-between">
                   {section.image && (
