@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import urlFor from "../utils/imageUrlBuilder";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { register } from "@/utils/eventZilla";
 
 const Header = ({ layout }) => {
   const { mainLogo = "", header = [] } = layout;
@@ -87,6 +88,9 @@ const Header = ({ layout }) => {
               {title}
             </Link>
           ))}
+          <div onClick={register} className="cursor-pointer">
+            Register now
+          </div>
         </ul>
       </div>
 
@@ -119,6 +123,12 @@ const Header = ({ layout }) => {
                 {title}
               </Link>
             ))}
+            <div
+              onClick={register}
+              className="cursor-pointer uppercase py-4 font-regular text-lg"
+            >
+              Register now
+            </div>
           </div>
         </div>
       </div>
