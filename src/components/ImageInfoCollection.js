@@ -11,22 +11,22 @@ const ImageInfoCollection = ({
   moreSpeakersText,
 }) => {
   return (
-    <div className="font-regular flex flex-col lg:pt-40 pt-24 bg-white">
+    <div className="font-regular flex flex-col lg:pt-40 pt-24 bg-white pb-12 md:pb-24">
       
       <div className="flex flex-col lg:flex-row items-start pt-20 px-7 lg:px-20 text-darkBlue">
         
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[35%]">
-          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
+          <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim ipad-landscape:text-5xl">
             <BlockContent blocks={title} />
           </div>
           <div className="anim pb-6">
-            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+            <BlockContent blocks={subtitle} className="text-base lg:text-lg" />
           </div>
           {CTATitle && (
             <button
               onClick={register}
-              className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
+              className="flex items-center lg:px-12 px-7 lg:py-4 ipad-landscape:px-8 ipad-landscape:py-3 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
             >
               {CTATitle}
             </button>
@@ -34,7 +34,7 @@ const ImageInfoCollection = ({
         </div>
 
         {/* RIGHT SPEAKERS BLOCK */}
-        <div className="w-full lg:w-[65%] flex justify-end items-start lg:pt-0">
+        <div className="w-full lg:w-[65%] md:w-full flex justify-end items-start lg:pt-0 pt-12">
           <div 
             className="grid gap-y-10 w-full"
             style={{
@@ -44,18 +44,18 @@ const ImageInfoCollection = ({
           >
             {collection.map(({ image, title, subtitle, logo }, index) => (
               <div
-                className="flex flex-col items-center justify-center py-6 anim"
+                className="flex flex-col items-center justify-center anim"
                 key={index}
               >
                 <div className="m-auto flex flex-col justify-center items-center text-center w-full">
                   <div
-                    className="rounded-xl w-full md:max-w-[256px] aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
+                    className="rounded-xl w-full lg:max-w-[256px] md:max-w-[200px] aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
                     style={{ backgroundImage: `url(${urlFor(image)})` }}
                   ></div>
                   <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4 leading-none pb-2">
                     {title && <BlockContent blocks={title} />}
                   </div>
-                  <div className="w-10/12 text-center text-xs pb-3">
+                  <div className="w-10/12 text-center text-base pb-3">
                     {subtitle && <BlockContent blocks={subtitle} />}
                   </div>
                 </div>

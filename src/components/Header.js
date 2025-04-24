@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import urlFor from "../utils/imageUrlBuilder";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -50,10 +50,7 @@ const Header = ({ layout }) => {
   );
 
   return (
-    <div
-      className="z-50 w-full absolute top-0 left-0 text-white bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/navbg.jpg')" }}
-    >
+    <div className="z-50 w-full absolute top-0 left-0 text-white bg-cover bg-center bg-no-repeat bg-[url('/headerbgmobile.jpg')] md:bg-[url('/navbg.jpg')]">
       <div className="flex items-end justify-between lg:px-20 px-6 lg:py-14 py-10">
         <div className="flex lg:hidden items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer">
           <img className="h-12" src={urlFor(mainLogo)} alt="primary logo" />
@@ -74,7 +71,7 @@ const Header = ({ layout }) => {
             )}
           </span>
         </div>
-        <ul className="hidden lg:flex uppercase lg:items-center lg:w-auto lg:space-x-10 !list-none">
+        <ul className="hidden lg:flex uppercase lg:items-center lg:w-auto lg:space-x-10 ipad-landscape:space-x-3 !list-none ipad-landscape:text-[14px]">
           {header.map(({ slug, title }, i) => (
             <Link
               key={i}

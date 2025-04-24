@@ -1,5 +1,4 @@
 "use client";
-import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
 import { getValidUrl } from "@/utils/validUrl";
 import serializers from "@/utils/serializers";
@@ -62,7 +61,7 @@ const MainHero = ({
               <div className="pt-4 fadeIn">
                 <button
                   onClick={register}
-                  className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
+                  className="flex items-center  lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
                 >
                   {buttonText}
                 </button>

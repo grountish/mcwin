@@ -35,11 +35,14 @@ const ImageInfoCTACollection = ({
 
         {/* RIGHT COLLECTION BLOCK */}
         <div className="w-full lg:w-[80%] flex justify-end items-start pt-12 lg:pt-0">
-          <div className="flex flex-wrap gap-x-8 gap-y-10 justify-start" style={{ maxWidth: 'calc(261px * 3 + 32px * 2)' }}>
+          <div
+            className="flex flex-wrap gap-x-8 gap-y-10 justify-start"
+            style={{ maxWidth: "calc(261px * 3 + 32px * 2)" }}
+          >
             {collection.map((section, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-between text-darkBlue border border-darkBlue rounded-2xl overflow-hidden fadeIn w-[261px]"
+                className="flex flex-col justify-between text-darkBlue border border-darkBlue rounded-2xl overflow-hidden fadeIn w-full sm:w-[261px]"
               >
                 <div className="flex flex-col justify-between">
                   {section.image && (
@@ -57,7 +60,7 @@ const ImageInfoCTACollection = ({
                     <div className="font-poppinsExtraBold text-lg pb-2">
                       <BlockContent blocks={section.title} />
                     </div>
-                    <div className="text-xs pb-4">
+                    <div className="text-base pb-4">
                       <BlockContent blocks={section.subtitle} />
                     </div>
                   </div>

@@ -16,7 +16,7 @@ const TitleSubtitleCTA = ({ title, subtitle, CTATitle, CTAURL }) => {
             {CTAURL || CTATitle ? (
               <div className="pt-10">
                 <a href={CTAURL}>
-                  <div className="flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border">
+                  <div className="flex items-center lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border">
                     {CTATitle}
                   </div>
                 </a>

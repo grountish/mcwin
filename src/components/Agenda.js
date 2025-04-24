@@ -59,7 +59,7 @@ const Agenda = ({ slots }) => {
         <div className='w-full flex fadeIn py-20'>
           <div onClick={register} className='m-auto'>
             <div
-              className={`flex items-center lg:px-20 px-7 lg:py-5 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 border-mainBlue border-2 text-mainBlue hover:bg-mainBlue hover:text-gray-100`}
+              className={`flex items-center lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 border-mainBlue border-2 text-mainBlue hover:bg-mainBlue hover:text-gray-100`}
             >
               Register now
             </div>
