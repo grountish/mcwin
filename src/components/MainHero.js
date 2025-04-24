@@ -25,7 +25,7 @@ const MainHero = ({
               <div className="space-y-6 py-6 border-x-0">
                 <BlockContent
                   blocks={title}
-                  className="lg:text-6xl text-4xl font-poppinsExtraBold anim  drop-shadow-xl"
+                  className="lg:text-6xl text-4xl font-poppinsExtraBold anim drop-shadow-xl"
                 />
                 <div className="flex flex-col">
                   <span className="font-poppinsExtraBold text-2xl leading-[30px] tracking-normal">
@@ -44,15 +44,13 @@ const MainHero = ({
               </div>
               <div className="py-[3vh] space-y-6 text-xl">
                 <div className="flex">
-                  <img src="/calendar.svg" alt="calendar" className="pr-3" />{" "}
-                  <span></span>
+                  <img src="/calendar.svg" alt="calendar" className="pr-3" />
                   <div className="underlined fadeIn">
                     <BlockContent blocks={date} className="fadeIn" />
                   </div>
                 </div>
                 <div className="flex">
-                  <img src="/location.svg" alt="location" className="pr-3" />{" "}
-                  <span></span>
+                  <img src="/location.svg" alt="location" className="pr-3" />
                   <div className="underlined fadeIn">
                     <BlockContent blocks={location} serializers={serializers} />
                   </div>
@@ -61,12 +59,13 @@ const MainHero = ({
               <div className="pt-4 fadeIn">
                 <button
                   onClick={register}
-                  className="flex items-center  lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
+                  className="flex items-center lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border-2"
                 >
                   {buttonText}
                 </button>
               </div>
             </div>
+
             <div className="lg:w-1/2 w-full lg:pl-10 pt-20 lg:pt-[36px]">
               <div className="relative rounded-lg">
                 <video
@@ -85,42 +84,19 @@ const MainHero = ({
               </div>
             </div>
           </div>
-          {/* <div className="flex md:flex-row flex-col justify-between w-full border-t-2 border-t-darkBlue">
-          <h4 className="anim lg:text-2xl uppercase md:w-1/2 pt-8 pr-6">
-            {foundersText}
-          </h4>
-          <div className="anim border-white text-lg lg:text-2xl md:w-1/2 pt-8">
-            <BlockContent blocks={bottomText} />
-          </div>
-        </div> */}
-
-          {/* {founders && (
-            <div className="w-full flex-wrap flex md:gap-x-9 md:gap-y-4 gap-6 items-center justify-center md:justify-normal md:pb-20">
-              {founders?.map(({ image, url }, index) => {
-                return (
-                  <a href={url} target="_blank" rel="noreferrer" key={index} className="fadeIn">
-                    <img
-                      key={index}
-                      src={urlFor(image)}
-                      alt="Pictu"
-                      className="md:h-[55px] md:max-w-[133px] md:pr-4 h-10 max-w-[95px] fadeIn hover:scale-110 transition-transform duration-500 ease-in-out"
-                    />
-                  </a>
-                );
-              })}
-            </div>
-          )}
-        </div>*/}
         </div>
       </div>
+
+      {/* Background section with responsive image */}
       <div
-        className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/mainHeroBgImg.jpg')" }}
+        className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat
+                   bg-[url('/bg_banner_home_mobile.jpg')]
+                   md:bg-[url('/bg_banner_home_desk.jpg')]"
       >
         <div className="flex flex-col gap-10 justify-between w-full text-white">
           <div className="w-4/5 mx-auto font-regular md:text-2xl text-md md:leading-[30px] tracking-normal text-center">
             <span>
-              The McWin Founders and Partners - Henry McGovern, Steve K.
+              The McWin Founders and Partners – Henry McGovern, Steve K.
               Winegar, Guillaume Charlin, Martin Davalos, Harry Goss and Troy
               Weeks will all be in attendance.
             </span>

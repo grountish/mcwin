@@ -18,6 +18,11 @@ const Header = ({ layout }) => {
     setMenuOpen(false);
   };
 
+  const handleMobileLinkClick = (slug) => {
+    closeMenu();
+    router.push(slug);
+  };
+
   const path = router.pathname;
 
   const burgerIcon = (
@@ -110,18 +115,21 @@ const Header = ({ layout }) => {
         <div>
           <div className="text-right flex flex-col">
             {header.map(({ slug, title }, i) => (
-              <Link
+              <button
                 key={i}
+                onClick={() => handleMobileLinkClick(slug)}
                 className={`${
                   path === slug ? "font-bold" : ""
-                } uppercase py-4 font-regular text-lg`}
-                href={slug}
+                } uppercase py-4 font-regular text-lg text-right`}
               >
                 {title}
-              </Link>
+              </button>
             ))}
             <div
-              onClick={register}
+              onClick={() => {
+                closeMenu();
+                register();
+              }}
               className="cursor-pointer uppercase py-4 font-regular text-lg"
             >
               Register now
