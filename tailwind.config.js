@@ -35,7 +35,7 @@ module.exports = {
       screens: {
         xs: { max: "380px" },
         'ipad-landscape': {
-          raw: '(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)',
+          raw: '(min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape)',
         },
       },
     },

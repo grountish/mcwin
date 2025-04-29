@@ -86,8 +86,7 @@ const MainHero = ({
           </div>
         </div>
       </div>
-
-      {/* Background section with responsive image */}
+      
       <div
         className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat
                    bg-[url('/bg_banner_home_mobile.jpg')]

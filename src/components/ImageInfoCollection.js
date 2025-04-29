@@ -44,24 +44,25 @@ const ImageInfoCollection = ({
           >
             {collection.map(({ image, title, subtitle, logo }, index) => (
               <div
-                className="flex flex-col items-center justify-center anim"
                 key={index}
+                className="flex flex-col items-start text-center anim"
               >
-                <div className="m-auto flex flex-col justify-center items-center text-center w-full">
-                  <div
-                    className="rounded-xl w-full lg:max-w-[256px] md:max-w-[200px] aspect-square bg-cover bg-center bg-no-repeat transition-all duration-300"
-                    style={{ backgroundImage: `url(${urlFor(image)})` }}
-                  ></div>
-                  <div className="text-mainBlue font-poppinsExtraBold text-lg pt-4 leading-none pb-2">
+                {/* IMAGE ALWAYS ON TOP, FIXED SIZE */}
+                <div
+                  className="rounded-xl w-full lg:max-w-[256px] md:max-w-[200px] aspect-square bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${urlFor(image)})` }}
+                ></div>
+
+                {/* TEXT BELOW IMAGE */}
+                <div className="w-full flex flex-col items-center pt-4">
+                  <div className="text-mainBlue font-poppinsExtraBold text-lg leading-none pb-2">
                     {title && <BlockContent blocks={title} />}
                   </div>
                   <div className="w-10/12 text-center text-base pb-3">
                     {subtitle && <BlockContent blocks={subtitle} />}
                   </div>
-                </div>
-                <div className="m-auto">
                   <img
-                    className="h-[15px] object-contain m-auto"
+                    className="h-[15px] object-contain"
                     src={urlFor(logo)}
                     alt="company logo"
                   />

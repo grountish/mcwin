@@ -19,8 +19,8 @@ const ImageInfoCTACollection = ({
           <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim">
             <BlockContent blocks={title} />
           </div>
-          <div className="anim pb-6">
-            <BlockContent blocks={subtitle} className="text-xs lg:text-lg" />
+          <div className="anim pb-6 text-xs lg:text-lg">
+            <BlockContent blocks={subtitle} />
           </div>
           {CTATitle && CTAURL && (
             <div className="pt-10">
@@ -36,7 +36,7 @@ const ImageInfoCTACollection = ({
         {/* RIGHT COLLECTION BLOCK */}
         <div className="w-full lg:w-[80%] flex justify-end items-start pt-12 lg:pt-0">
           <div
-            className="flex flex-wrap gap-x-8 gap-y-10 justify-start"
+            className="flex flex-wrap gap-x-8 gap-y-10 ipad-landscape:justify-end justify-start"
             style={{ maxWidth: "calc(261px * 3 + 32px * 2)" }}
           >
             {collection.map((section, index) => (
@@ -66,7 +66,7 @@ const ImageInfoCTACollection = ({
                   </div>
                 </div>
                 <div className="pt-6 text-center px-4 pb-4">
-                  <Link href={section.buttonUrl} target="_blank">
+                  <Link href={section.buttonUrl} target="_blank" rel="noopener noreferrer">
                     <div className="flex items-center justify-center transition duration-300 rounded-full font-poppinsExtraBold text-base cursor-pointer hover:drop-shadow-md z-50 text-darkBlue hover:text-deepBlue hover:border-deepBlue bg-transparent border-darkBlue border px-6 py-3 w-full">
                       {section.buttonTitle}
                     </div>
@@ -76,6 +76,7 @@ const ImageInfoCTACollection = ({
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
