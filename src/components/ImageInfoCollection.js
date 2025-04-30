@@ -45,20 +45,20 @@ const ImageInfoCollection = ({
             {collection.map(({ image, title, subtitle, logo }, index) => (
               <div
                 key={index}
-                className="flex flex-col items-start text-center anim"
+                className="flex flex-col items-center text-center anim"
               >
-                {/* IMAGE ALWAYS ON TOP, FIXED SIZE */}
-                <div
-                  className="rounded-xl w-full lg:max-w-[256px] md:max-w-[200px] aspect-square bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${urlFor(image)})` }}
-                ></div>
+                <div className="flex flex-col items-center max-w-[256px] w-full">
+                  {/* IMAGE */}
+                  <div
+                    className="rounded-xl aspect-square bg-cover bg-center bg-no-repeat w-full"
+                    style={{ backgroundImage: `url(${urlFor(image)})` }}
+                  ></div>
 
-                {/* TEXT BELOW IMAGE */}
-                <div className="w-full flex flex-col items-center pt-4">
-                  <div className="text-mainBlue font-poppinsExtraBold text-lg leading-none pb-2">
+                  {/* TEXT BLOCK */}
+                  <div className="text-mainBlue font-poppinsExtraBold text-lg leading-none pt-4 pb-2">
                     {title && <BlockContent blocks={title} />}
                   </div>
-                  <div className="w-10/12 text-center text-base pb-3">
+                  <div className="text-base pb-3">
                     {subtitle && <BlockContent blocks={subtitle} />}
                   </div>
                   <img
