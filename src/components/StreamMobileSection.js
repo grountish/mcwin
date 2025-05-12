@@ -1,28 +1,25 @@
-import React, { useState } from "react";
-import Button from "./Button";
 import BlockContent from "@sanity/block-content-to-react";
 
 const StreamMobileSection = ({ agenda }) => {
-  const [showAll, setshowAll] = useState(false);
-  //force deploy test
   return (
     <div>
-      <h2 className='text-2xl border-b border-white pb-3 mb-12 pt-8'>Agenda</h2>
-      <div className='border border-deepBlue rounded-xl p-6 bg-nightBlue'>
-        {agenda
-          ?.slice(0, showAll ? agenda.length : 7)
-          .map(({ _key, name, time, speaker }) => {
+      <div className="border border-darkBlue rounded-xl p-6 mt-12">
+        <h2 className="text-2xl pb-3 pt-8 text-deepBlue font-bold">
+          Agenda
+        </h2>
+        <div className="mt-6 space-y-2 h-[400px] overflow-y-auto pr-2">
+          {agenda.map(({ _key, name, time, speaker }) => {
             return (
               <div
                 key={_key}
-                className={`lg:hidden flex justify-between pb-4 py-4 fadeInpt-3 border-t ${
-                  !speaker ? "border-t-deepBlue" : "border-t-white"
-                } text-sm lg:text-lg`}
+                className={`lg:hidden flex justify-between py-4 border-t fadeIn text-sm lg:text-lg ${
+                  !speaker ? "border-t-deepBlue" : "border-t-darkBlue"
+                }`}
               >
-                <div className='pr-5'>
+                <div className="pr-5">
                   <h2
                     className={`font-semibold ${
-                      !speaker ? "text-deepBlue " : "text-white"
+                      !speaker ? "text-deepBlue" : "text-darkBlue"
                     }`}
                   >
                     {name}
@@ -30,13 +27,13 @@ const StreamMobileSection = ({ agenda }) => {
                   <div>
                     <BlockContent
                       blocks={speaker}
-                      className='text-xs lg:text-lg'
+                      className="text-xs lg:text-lg"
                     />
                   </div>
                 </div>
                 <h2
                   className={`font-semibold ${
-                    !speaker ? "text-deepBlue" : "text-white"
+                    !speaker ? "text-deepBlue" : "text-darkBlue"
                   }`}
                 >
                   {time}
@@ -44,17 +41,7 @@ const StreamMobileSection = ({ agenda }) => {
               </div>
             );
           })}
-        {!showAll && (
-          <div className='w-full flex lg:hidden fadeIn'>
-            <div onClick={() => setshowAll(true)} className='m-auto w-full'>
-              <Button
-                title='View All'
-                hasIcon
-                classes='!bg-mainBlue !text-white !text-lg !text-semibold !w-full !justify-center !border-none'
-              />
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
