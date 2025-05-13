@@ -1,56 +1,52 @@
-import React, { useState } from "react";
-import Button from "./Button";
-import BlockContent from "@sanity/block-content-to-react";
+import React from "react";
 
-const AgendaMobileSection = ({ events }) => {
-  const [showAll, setshowAll] = useState(false);
-  //force deploy test
+const AgendaMobileSection = ({ slots }) => {
+  let globalIndex = 0;
+
   return (
     <div>
-      {events
-        ?.slice(0, showAll ? events.length : 3)
-        .map(({ _key, name, time, speaker }) => {
-          return (
-            <div
-              key={_key}
-              className='md:hidden flex justify-between pb-4 py-4 fadeInpt-3 border-t border-deepBlue text-sm lg:text-lg'
-            >
-              <div className='pr-5'>
-                <h2
-                  className={`font-semibold ${
-                    !speaker ? "uppercase text-deepBlue" : "text-mainBlue"
-                  }`}
-                >
-                  {name}
-                </h2>
-                <div>
-                  <BlockContent
-                    blocks={speaker}
-                    className='text-xs lg:text-lg'
-                  />
-                </div>
-              </div>
-              <h2
-                className={`font-semibold ${
-                  !speaker ? "uppercase text-mainBlue" : "text-deepBlue"
+      {/* Column headers */}
+      <div className="flex justify-between pb-4 border-b border-darkBlue uppercase text-xs font-semibold text-mainBlue">
+        <h3>Speakers / Subject</h3>
+        <h3>Time</h3>
+      </div>
+
+      {slots.map(({ _key, events }) => (
+        <div key={_key}>
+          {events.map(({ _key, name, time, speakers, textColor }) => {
+            const hasBorder = globalIndex !== 0;
+            globalIndex++;
+
+            const colorStyle = textColor?.hex ? { color: textColor.hex } : {};
+
+            return (
+              <div
+                key={_key}
+                className={`flex justify-between pb-4 py-4 fadeInpt-3 text-sm lg:text-lg ${
+                  hasBorder ? "border-t border-darkBlue" : ""
                 }`}
+                style={colorStyle}
               >
-                {time}
-              </h2>
-            </div>
-          );
-        })}
-      {!showAll && (
-        <div className='w-full flex md:hidden fadeIn py-20'>
-          <div onClick={() => setshowAll(true)} className='m-auto w-full'>
-            <Button
-              title='View All'
-              hasIcon
-              classes='!bg-mainBlue !text-white !text-lg !text-semibold !w-full !justify-center'
-            />
-          </div>
+                {/* Left: Subject and Speakers */}
+                <div className="pr-5 flex flex-col">
+                  <h2 className="font-bold">{name}</h2>
+                  {speakers?.map((speaker, idx) => (
+                    <div key={idx} className="mt-1">
+                      <p className="font-semibold">{speaker.name}</p>
+                      {speaker.position && (
+                        <p className="text-sm font-light">{speaker.position}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Right: Time */}
+                <h2 className="font-bold text-right">{time}</h2>
+              </div>
+            );
+          })}
         </div>
-      )}
+      ))}
     </div>
   );
 };

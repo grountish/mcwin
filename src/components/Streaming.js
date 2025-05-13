@@ -17,7 +17,7 @@ const Streaming = ({ agenda }) => {
             </div>
             <div className="flex w-full flex-col lg:flex-row justify-between lg:space-x-12">
               <div className="lg:flex hidden relative font-regular flex-col p-4 border-darkBlue rounded-2xl border text-darkBlue w-full max-h-[290px] mt-8 lg:mt-0">
-                <h4 className="text-darkBlue pt-4 pb-12">Agenda</h4>
+                <h4 className="text-darkBlue pt-4 pb-12 font-bold">Agenda</h4>
                 <div className="overflow-scroll pb-20">
                   {agenda?.map(({ _key, name, time, speaker }) => {
                     return (
