@@ -22,7 +22,7 @@ const AgendaMobileSection = ({ slots }) => {
             return (
               <div
                 key={_key}
-                className={`flex justify-between pb-4 py-4 fadeInpt-3 text-sm lg:text-lg ${
+                className={`flex justify-between pb-4 py-4 fadeIn pt-3 text-sm lg:text-lg ${
                   hasBorder ? "border-t border-darkBlue" : ""
                 }`}
                 style={colorStyle}

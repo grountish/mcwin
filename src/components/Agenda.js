@@ -12,18 +12,18 @@ const Agenda = ({ slots }) => {
   let globalEventIndex = 0;
 
   return (
-    <div ref={topRef} className="lg:pt-60 pt-48 relative">
+    <div ref={topRef} className="lg:pt-60 pt-48 relative max-w-[1440px] mx-auto">
       <div className="flex flex-col lg:flex-row items-start lg:space-x-12 px-7 lg:px-20">
         {/* Sidebar */}
         <div className="w-full lg:w-[40%] flex flex-col items-start text-left">
-          <h1 className="text-4xl lg:text-6xl font-poppinsExtraBold uppercase text-darkBlue pb-6">
+          <h1 className="text-4xl lg:text-6xl font-poppinsExtraBold uppercase text-darkBlue pb-6 fadeIn">
             Agenda
           </h1>
-          <p className="text-darkBlue text-lg pb-10 lg:pb-20">
+          <p className="text-darkBlue text-lg pb-10 lg:pb-8 fadeIn">
             Join us to accelerate the transformation.
           </p>
           <div onClick={register}>
-            <div className="flex items-center px-7 py-3 lg:px-12 lg:py-4 transition duration-300 rounded-full font-poppinsExtraBold text-base lg:text-xl cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
+            <div className="flex items-center px-7 py-3 lg:px-12 fadeIn lg:py-4 transition duration-300 rounded-full font-poppinsExtraBold text-base lg:text-xl cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
               Register now
             </div>
           </div>
@@ -31,9 +31,9 @@ const Agenda = ({ slots }) => {
         <div className="hidden lg:flex w-full lg:w-[70%] flex-col justify-center items-start bg-white border border-darkBlue rounded-3xl text-deepBlue lg:py-8">
           <div className="w-full md:px-12 px-7 pb-4">
             <div className="grid grid-cols-7 font-semibold uppercase text-sm text-mainBlue">
-              <h3 className="col-span-1">Time</h3>
-              <h3 className="col-span-3">Subject</h3>
-              <h3 className="col-span-3">Speakers</h3>
+              <h3 className="col-span-1 fadeIn">Time</h3>
+              <h3 className="col-span-3 fadeIn">Subject</h3>
+              <h3 className="col-span-3 fadeIn">Speakers</h3>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const Agenda = ({ slots }) => {
                 return (
                   <div
                     key={_key}
-                    className={`grid grid-cols-7 pb-4 py-4 fadeInpt-3 text-sm lg:text-lg font-bold ${
+                    className={`grid grid-cols-7 pb-4 py-4 pt-3 text-sm lg:text-lg font-bold fadeIn ${
                       !isFirstGlobal ? "border-t border-deepBlue" : ""
                     }`}
                     style={colorStyle}
@@ -73,7 +73,7 @@ const Agenda = ({ slots }) => {
             </div>
           ))}
 
-          <div className="w-full flex fadeIn py-20">
+          <div className="w-full flex py-20">
             <div onClick={register} className="m-auto">
               <div className="flex items-center lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
                 Register now
@@ -86,7 +86,7 @@ const Agenda = ({ slots }) => {
           <AgendaMobileSection slots={slots} />
         </div>
 
-        <div className="lg:hidden w-full flex fadeIn py-20">
+        <div className="lg:hidden w-full flex py-20">
           <div onClick={register} className="m-auto">
             <div className="flex items-center px-7 py-3 transition duration-300 rounded-full font-poppinsExtraBold text-base cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
               Register now

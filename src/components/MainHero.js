@@ -17,7 +17,7 @@ const MainHero = ({
 }) => {
   return (
     <div>
-      <div className="relative font-regular">
+      <div className="relative font-regular max-w-[1440px] mx-auto">
         <div className="md:pt-48 test lg:px-20 pt-20 px-7 bg-white bg-cover bg-no-repeat text-darkBlue">
           <div className="flex flex-col lg:flex-row pt-24 md:pt-[3vh] md:pb-28 pb-10">
             <div className="lg:w-1/2 w-full lg:pr-10">
@@ -92,7 +92,7 @@ const MainHero = ({
                    bg-[url('/bg_banner_home_mobile.jpg')]
                    md:bg-[url('/bg_banner_home_desk.jpg')]"
       >
-        <div className="flex flex-col gap-10 justify-between w-full text-white">
+        <div className="flex flex-col gap-10 justify-between w-full text-white max-w-[1440px] mx-auto">
           <div className="w-4/5 mx-auto font-regular md:text-2xl text-md md:leading-[30px] tracking-normal text-center">
             <span>
               The McWin Founders and Partners – Henry McGovern, Steve K.

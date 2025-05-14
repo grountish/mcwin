@@ -11,10 +11,8 @@ const ImageInfoCollection = ({
   moreSpeakersText,
 }) => {
   return (
-    <div className="font-regular flex flex-col lg:pt-60 pt-48 bg-white pb-12 md:pb-24">
-      
+    <div className="font-regular flex flex-col lg:pt-60 pt-48 bg-white pb-12 md:pb-24 max-w-[1440px] mx-auto">
       <div className="flex flex-col lg:flex-row items-start px-7 lg:px-20 text-darkBlue">
-        
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[35%]">
           <div className="lg:text-6xl text-4xl font-poppinsExtraBold uppercase pb-6 anim ipad-landscape:text-5xl">

@@ -56,7 +56,7 @@ const Header = ({ layout }) => {
 
   return (
     <div className="z-50 w-full absolute top-0 left-0 text-white bg-cover bg-center bg-no-repeat bg-[url('/headerbgmobile.jpg')] md:bg-[url('/navbg.jpg')]">
-      <div className="flex items-end justify-between lg:px-20 px-6 lg:py-14 py-10">
+      <div className="flex items-end justify-between lg:px-20 px-6 lg:py-14 py-10 max-w-[1440px] mx-auto">
         <div className="flex lg:hidden items-center lg:self-center justify-between h-16 lg:mr-auto cursor-pointer">
           <img className="h-12" src={urlFor(mainLogo)} alt="primary logo" />
         </div>
