@@ -3,7 +3,7 @@ import BlockContent from "@sanity/block-content-to-react";
 
 const TitleSubtitleCTA = ({ title, subtitle, CTATitle, CTAURL }) => {
   return (
-    <div className="relative font-regular bg-white">
+    <div className="relative font-regular bg-white 2xl:min-h-[88vh] min-h-[70vh]">
       <div className="py-36 lg:px-20 px-7 text-darkBlue lg:min-h-screen min-h-[85vh]">
         <div className="flex flex-col lg:flex-row pt-20 pb-32">
           <div className="lg:w-1/2 w-full lg:pr-10">

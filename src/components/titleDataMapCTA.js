@@ -20,7 +20,7 @@ const TitleDataMapCTA = ({
   buttonTitle,
 }) => {
   return (
-    <div className="relative font-regular lg:pt-60 pt-48 max-w-[1440px] mx-auto">
+    <div className="relative font-regular lg:pt-60 pt-48 max-w-[1440px] mx-auto 2xl:min-h-[88vh] min-h-[70vh]">
       <div className="lg:px-20 px-7 bg-white text-darkBlue">
         <div className="flex flex-col lg:flex-row pb-32 justify-between">
           <div className="lg:w-1/2 w-full lg:pr-10 pb-10 lg:pb-0">

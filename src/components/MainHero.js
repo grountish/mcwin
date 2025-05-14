@@ -87,11 +87,7 @@ const MainHero = ({
         </div>
       </div>
       
-      <div
-        className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat
-                   bg-[url('/bg_banner_home_mobile.jpg')]
-                   md:bg-[url('/bg_banner_home_desk.jpg')]"
-      >
+      <div className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat bg-[url('/bg_banner_home_mobile.jpg')] md:bg-[url('/bg_banner_home_desk.jpg')]" >
         <div className="flex flex-col gap-10 justify-between w-full text-white max-w-[1440px] mx-auto">
           <div className="w-4/5 mx-auto font-regular md:text-2xl text-md md:leading-[30px] tracking-normal text-center">
             <span>

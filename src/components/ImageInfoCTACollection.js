@@ -12,7 +12,7 @@ const ImageInfoCTACollection = ({
   collection,
 }) => {
   return (
-    <div className="relative font-regular flex flex-col lg:pb-40 pb-24 lg:pt-60 pt-48 text-darkBlue bg-white max-w-[1440px] mx-auto">
+    <div className="relative font-regular flex flex-col lg:pb-40 pb-24 lg:pt-60 pt-48 text-darkBlue bg-white max-w-[1440px] mx-auto 2xl:min-h-[88vh] min-h-[70vh]">
       <div className="flex flex-col lg:flex-row px-7 lg:px-20">
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[20%]">
