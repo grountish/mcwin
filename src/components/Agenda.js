@@ -30,7 +30,7 @@ const Agenda = ({ slots }) => {
         </div>
         <div className="hidden lg:flex w-full lg:w-[70%] flex-col justify-center items-start bg-white border border-darkBlue rounded-3xl text-deepBlue lg:py-8">
           <div className="w-full md:px-12 px-7 pb-4">
-            <div className="grid grid-cols-7 font-semibold uppercase text-sm text-mainBlue">
+            <div className="grid grid-cols-7 font-poppinsSemiBold uppercase text-sm text-mainBlue">
               <h3 className="col-span-1 fadeIn">Time</h3>
               <h3 className="col-span-3 fadeIn">Subject</h3>
               <h3 className="col-span-3 fadeIn">Speakers</h3>
@@ -50,7 +50,7 @@ const Agenda = ({ slots }) => {
                 return (
                   <div
                     key={_key}
-                    className={`grid grid-cols-7 pb-4 py-4 pt-3 text-sm lg:text-lg font-bold fadeIn ${
+                    className={`grid grid-cols-7 pb-4 py-4 pt-3 text-sm lg:text-lg font-poppinsBold fadeIn ${
                       !isFirstGlobal ? "border-t border-deepBlue" : ""
                     }`}
                     style={colorStyle}
@@ -62,7 +62,7 @@ const Agenda = ({ slots }) => {
                         <div key={idx}>
                           <p className="font-semibold">{speaker.name}</p>
                           {speaker.position && (
-                            <p className="text-sm font-light">{speaker.position}</p>
+                            <p className="text-sm font-poppinsSemiBold">{speaker.position}</p>
                           )}
                         </div>
                       ))}

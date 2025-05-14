@@ -29,10 +29,10 @@ const AgendaMobileSection = ({ slots }) => {
               >
                 {/* Left: Subject and Speakers */}
                 <div className="pr-5 flex flex-col">
-                  <h2 className="font-bold">{name}</h2>
+                  <h2 className="font-poppinsBold">{name}</h2>
                   {speakers?.map((speaker, idx) => (
                     <div key={idx} className="mt-1">
-                      <p className="font-semibold">{speaker.name}</p>
+                      <p className="font-poppinsSemiBold">{speaker.name}</p>
                       {speaker.position && (
                         <p className="text-sm font-light">{speaker.position}</p>
                       )}
@@ -41,7 +41,7 @@ const AgendaMobileSection = ({ slots }) => {
                 </div>
 
                 {/* Right: Time */}
-                <h2 className="font-bold text-right">{time}</h2>
+                <h2 className="font-poppinsBold text-right">{time}</h2>
               </div>
             );
           })}
