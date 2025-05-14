@@ -12,11 +12,11 @@ const Agenda = ({ slots }) => {
   let globalEventIndex = 0;
 
   return (
-    <div ref={topRef} className="lg:pt-40 pt-12 pb-24 relative">
+    <div ref={topRef} className="lg:pt-60 pt-48 relative">
       <div className="flex flex-col lg:flex-row items-start lg:space-x-12 px-7 lg:px-20">
         {/* Sidebar */}
         <div className="w-full lg:w-[40%] flex flex-col items-start text-left">
-          <h1 className="text-4xl lg:text-6xl font-poppinsExtraBold uppercase text-darkBlue pt-32 pb-6">
+          <h1 className="text-4xl lg:text-6xl font-poppinsExtraBold uppercase text-darkBlue pb-6">
             Agenda
           </h1>
           <p className="text-darkBlue text-lg pb-10 lg:pb-20">
@@ -28,10 +28,7 @@ const Agenda = ({ slots }) => {
             </div>
           </div>
         </div>
-
-        {/* Desktop agenda */}
-        <div className="hidden lg:flex w-full lg:w-[70%] flex-col justify-center items-start bg-white border border-darkBlue rounded-3xl text-deepBlue lg:py-8 mt-16 lg:mt-32">
-          {/* Table headers displayed ONCE */}
+        <div className="hidden lg:flex w-full lg:w-[70%] flex-col justify-center items-start bg-white border border-darkBlue rounded-3xl text-deepBlue lg:py-8">
           <div className="w-full md:px-12 px-7 pb-4">
             <div className="grid grid-cols-7 font-semibold uppercase text-sm text-mainBlue">
               <h3 className="col-span-1">Time</h3>
@@ -40,7 +37,6 @@ const Agenda = ({ slots }) => {
             </div>
           </div>
 
-          {/* Agenda slots and events */}
           {slots?.map(({ _key, events }) => (
             <div key={_key} className="md:px-12 px-7 w-full">
               {events?.map(({ _key, name, time, speakers, textColor }) => {
@@ -59,13 +55,8 @@ const Agenda = ({ slots }) => {
                     }`}
                     style={colorStyle}
                   >
-                    {/* Time */}
                     <h2 className="font-semibold col-span-1">{time}</h2>
-
-                    {/* Subject */}
                     <h2 className="col-span-3 pr-3">{name}</h2>
-
-                    {/* Speakers */}
                     <div className="col-span-3 space-y-2">
                       {speakers?.map((speaker, idx) => (
                         <div key={idx}>
@@ -82,7 +73,6 @@ const Agenda = ({ slots }) => {
             </div>
           ))}
 
-          {/* Desktop CTA */}
           <div className="w-full flex fadeIn py-20">
             <div onClick={register} className="m-auto">
               <div className="flex items-center lg:px-12 px-7 lg:py-4 py-3 w-max transition duration-300 rounded-full font-poppinsExtraBold lg:text-xl text-base cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
@@ -92,12 +82,10 @@ const Agenda = ({ slots }) => {
           </div>
         </div>
 
-        {/* Mobile agenda */}
-        <div className="block lg:hidden w-full mt-16 border border-darkBlue rounded-2xl p-8">
+        <div className="block lg:hidden w-full border border-darkBlue rounded-2xl p-8 mt-12">
           <AgendaMobileSection slots={slots} />
         </div>
 
-        {/* Mobile CTA */}
         <div className="lg:hidden w-full flex fadeIn py-20">
           <div onClick={register} className="m-auto">
             <div className="flex items-center px-7 py-3 transition duration-300 rounded-full font-poppinsExtraBold text-base cursor-pointer hover:drop-shadow-md z-50 border-darkBlue border-2 text-darkBlue hover:bg-mainBlue hover:text-white">
@@ -106,8 +94,6 @@ const Agenda = ({ slots }) => {
           </div>
         </div>
       </div>
-
-      {/* Scroll to top button */}
       <div className="lg:hidden flex justify-end w-full px-7">
         <button onClick={scrollToTop} aria-label="Scroll to top">
           <svg

@@ -20,10 +20,9 @@ const TitleDataMapCTA = ({
   buttonTitle,
 }) => {
   return (
-    <div className="relative font-regular">
-      <div className="py-36 lg:px-20 px-7 bg-white text-darkBlue">
-        <div className="flex flex-col lg:flex-row pt-20 pb-32 justify-between">
-          {/* LEFT SIDE */}
+    <div className="relative font-regular lg:pt-60 pt-48">
+      <div className="lg:px-20 px-7 bg-white text-darkBlue">
+        <div className="flex flex-col lg:flex-row pb-32 justify-between">
           <div className="lg:w-1/2 w-full lg:pr-10 pb-10 lg:pb-0">
             <div className="text-2xl anim">
               <BlockContent blocks={topSecondaryTitle} />
@@ -85,9 +84,6 @@ const TitleDataMapCTA = ({
               {buttonTitle}
             </div>
           </div>
-
-          {/* RIGHT SIDE - MAP */}
-          <div className="pt-7">
             <iframe
               className="rounded-2xl xl:h-[450px] xl:w-[600px] lg:h-[400px] lg:w-[450px] w-full h-[500px]"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.965647058245!2d-3.7000110999999998!3d40.45389730000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229ec696e4141%3A0x16108830bed29888!2sGreen%20Patio!5e0!3m2!1ses-419!2ses!4v1710164830601!5m2!1ses-419!2ses"
@@ -95,7 +91,6 @@ const TitleDataMapCTA = ({
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
         </div>
       </div>
     </div>

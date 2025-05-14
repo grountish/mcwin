@@ -11,9 +11,9 @@ const ImageInfoCollection = ({
   moreSpeakersText,
 }) => {
   return (
-    <div className="font-regular flex flex-col lg:pt-40 pt-24 bg-white pb-12 md:pb-24">
+    <div className="font-regular flex flex-col lg:pt-60 pt-48 bg-white pb-12 md:pb-24">
       
-      <div className="flex flex-col lg:flex-row items-start pt-20 px-7 lg:px-20 text-darkBlue">
+      <div className="flex flex-col lg:flex-row items-start px-7 lg:px-20 text-darkBlue">
         
         {/* LEFT TEXT BLOCK */}
         <div className="w-full lg:w-[35%]">
