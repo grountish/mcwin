@@ -14,7 +14,6 @@ const Agenda = ({ slots }) => {
   return (
     <div ref={topRef} className="lg:pt-60 pt-48 relative max-w-[1440px] mx-auto">
       <div className="flex flex-col lg:flex-row items-start lg:space-x-12 px-7 lg:px-20">
-        {/* Sidebar */}
         <div className="w-full lg:w-[40%] flex flex-col items-start text-left">
           <h1 className="text-4xl lg:text-6xl font-poppinsExtraBold uppercase text-darkBlue pb-6 fadeIn">
             Agenda
@@ -62,7 +61,7 @@ const Agenda = ({ slots }) => {
                         <div key={idx}>
                           <p className="font-semibold">{speaker.name}</p>
                           {speaker.position && (
-                            <p className="text-sm font-poppinsSemiBold">{speaker.position}</p>
+                            <p className="text-sm font-regular">{speaker.position}</p>
                           )}
                         </div>
                       ))}
