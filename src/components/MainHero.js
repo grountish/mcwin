@@ -3,6 +3,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { getValidUrl } from "@/utils/validUrl";
 import serializers from "@/utils/serializers";
 import { register } from "@/utils/eventZilla";
+import urlFor from "@/utils/imageUrlBuilder";
 
 const MainHero = ({
   title,
@@ -14,7 +15,9 @@ const MainHero = ({
   video,
   videoText,
   foundersText,
+  companyLogos,
 }) => {
+  console.log(companyLogos);
   return (
     <div>
       <div className="relative font-regular max-w-[1440px] mx-auto">
@@ -86,19 +89,31 @@ const MainHero = ({
           </div>
         </div>
       </div>
-      
-      <div className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat bg-[url('/bg_banner_home_mobile.jpg')] md:bg-[url('/bg_banner_home_desk.jpg')]" >
+
+      <div className="relative md:py-20 lg:px-20 px-7 py-20 bg-cover bg-center bg-no-repeat bg-[url('/bg_banner_home_mobile.jpg')] md:bg-[url('/bg_banner_home_desk.jpg')]">
         <div className="flex flex-col gap-10 justify-between w-full text-white max-w-[1440px] mx-auto">
           <div className="w-4/5 mx-auto font-regular md:text-2xl text-md md:leading-[30px] tracking-normal text-center">
             <span>
-              The McWin Founders and Partners – Henry McGovern, Steve K.
+              The McWin Founders and Partners -  Steve K.
               Winegar, Guillaume Charlin, Martin Davalos, Harry Goss and Troy
               Weeks will all be in attendance.
             </span>
           </div>
-          <h4 className="w-3/5 mx-auto font-poppinsBold md:text-3xl text-xl md:leading-[34px] tracking-normal text-center uppercase">
+          <h4 className="w-3/5 mx-auto font-regular md:text-2xl text-xl md:leading-[34px] tracking-normal text-center">
             {foundersText}
           </h4>
+          {companyLogos?.length > 0 && (
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 lg:gap-x-24 lg:gap-y-12 pt-4 max-w-[800px] mx-auto">
+              {companyLogos.map((logo, index) => (
+                <img
+                  key={index}
+                  src={urlFor(logo).url()}
+                  alt={`Company logo ${index + 1}`}
+                  className="h-12 md:h-16 object-contain max-w-[150px]"
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
