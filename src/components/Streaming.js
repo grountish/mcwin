@@ -1,63 +1,86 @@
 import React, { useState } from "react";
-import BlockContent from "@sanity/block-content-to-react";
 import StreamMobileSection from "./StreamMobileSection";
 
-const Streaming = ({ agenda }) => {
+const Streaming = ({ agenda, videoUrl }) => {
   const [password, setPassword] = useState("");
   const [typedPassword, setTypedPassword] = useState("");
   const [wrongPassword, setWrongPassword] = useState(false);
 
+  const getEmbedUrl = (url) => {
+    if (!url) return "";
+    if (url.includes("youtube.com/live/")) {
+      const videoId = url.split("/live/")[1].split("?")[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    return url;
+  };
+
   return (
-    <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-20 text-darkBlue min-h-[90vh]">
+    <div className="lg:pt-40 test lg:px-20 pt-12 px-7 pb-20 text-darkBlue min-h-[90vh] max-w-[1440px] mx-auto">
       {password === "AIM2025" ? (
-        <div className="flex flex-col-reverse lg:flex-row items-start justify-end lg:space-x-8">
-          <div>
+        <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-x-4">
+          <div className="lg:w-[calc(100%-720px)] w-full">
             <div className="lg:text-6xl hidden lg:block text-4xl font-poppinsExtraBold uppercase pt-32 lg:pt-24 pb-12 anim text-darkBlue">
               Streaming
             </div>
-            <div className="flex w-full flex-col lg:flex-row justify-between lg:space-x-12">
+            <div className="flex w-full flex-col">
               <div className="lg:flex hidden relative font-regular flex-col p-4 border-darkBlue rounded-2xl border text-darkBlue w-full max-h-[290px] mt-8 lg:mt-0">
                 <h4 className="text-darkBlue pt-4 pb-12 font-bold">Agenda</h4>
-                <div className="overflow-scroll pb-20">
-                  {agenda?.map(({ _key, name, time, speaker }) => {
+                <div
+                  className="overflow-scroll pb-20 scrollbar-hide"
+                  style={{
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none",
+                  }}
+                >
+                  {agenda?.map(({ _key, name, time, speakers, textColor }) => {
+                    const colorStyle = textColor?.hex
+                      ? { color: textColor.hex }
+                      : {};
+
                     return (
                       <div
                         key={_key}
-                        className={`fadeIn border-t pt-3 pb-7 ${
-                          !speaker
-                            ? "text-deepBlue border-t-deepBlue"
-                            : "text-darkBlue border-t-darkBlue"
-                        }`}
+                        className="fadeIn border-t pt-3 pb-7 border-t-darkBlue"
+                        style={colorStyle}
                       >
                         <div className="flex flex-row justify-between">
-                          <h2 className="mr-2 font-semibold">{name}</h2>
-                          <h2 className="font-semibold">{time}</h2>
+                          <div>
+                            <h2 className="mr-2 font-semibold">{name}</h2>
+                            {speakers?.map((speaker, idx) => (
+                              <div key={idx} className="mt-1">
+                                <p className="text-sm font-medium">{speaker.name}</p>
+                                {speaker.position && (
+                                  <p className="text-xs font-light">{speaker.position}</p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                          <h2 className="font-semibold whitespace-nowrap">{time}</h2>
                         </div>
-                        <p>
-                          <BlockContent blocks={speaker} />
-                        </p>
                       </div>
                     );
                   })}
                 </div>
               </div>
-              <div className="lg:hidden block mb-12">
-                <StreamMobileSection agenda={agenda} />
-              </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-[80%] flex pt-24 lg:ml-auto justify-center lg:justify-end md:justify-start lg:px-0">
-            <div className="w-full fadeIn rounded-xl max-w-[700px]">
+          <div className="w-full lg:w-[700px] flex pt-24 justify-center lg:justify-end md:justify-start lg:px-0">
+            <div className="w-full fadeIn rounded-xl">
               <div className="lg:text-6xl lg:hidden block text-4xl font-poppinsExtraBold uppercase pt-32 lg:pt-24 pb-12 anim text-darkBlue">
                 Streaming
               </div>
               <div className="aspect-video w-full rounded-xl overflow-hidden">
                 <iframe
                   className="w-full h-full rounded-xl"
-                  src="https://www.youtube.com/embed/Rws5h7urz64?si=SnGPKEXeeTXtJIBy"
+                  src={getEmbedUrl(videoUrl)}
                   allowFullScreen
                 ></iframe>
+              </div>
+              <div className="lg:hidden block">
+                <StreamMobileSection agenda={agenda} />
               </div>
             </div>
           </div>
